@@ -9,18 +9,16 @@ const Navbar = () => {
         <h1>Sukoon</h1>
       </div>
       <div className="navbar-links">
-        <div className="navbar-link">
-          <Link to="/">Home</Link>
-        </div>
-        <div className="navbar-link">
-          <Link to="/about">About</Link>
-        </div>
-        <div className="navbar-link">
-          <Link to="/">Home</Link>
-        </div>
-        <div className="navbar-link">
-          <Link to="/">Home</Link>
-        </div>
+        <Link className="navbar-link" to="/">
+          <div>Home</div>
+        </Link>
+
+        <Link className="navbar-link" to="/about">
+          <div>About</div>
+        </Link>
+        <Link className="navbar-link" to="/test">
+          <div>Test</div>
+        </Link>
       </div>
     </div>
   );

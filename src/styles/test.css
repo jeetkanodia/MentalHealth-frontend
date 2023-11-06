@@ -1,0 +1,18 @@
+.test-container {
+    padding-top: 15vh;
+}
+
+.test-detail-section {
+    display: flex;
+    align-items: center;
+
+}
+
+.test-left {
+    width: 50%;
+}
+
+.test-caraosel-container {
+    width: 100%;
+    height: 40vh;
+}

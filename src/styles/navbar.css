@@ -14,3 +14,15 @@
     width: 6%;
     flex: wrap;
 }
+
+.navbar-link {
+    color: #c11b1b;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.navbar-link:hover {
+    color: #645a5a;
+}
