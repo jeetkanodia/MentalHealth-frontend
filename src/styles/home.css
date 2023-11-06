@@ -1,0 +1,83 @@
+.home {
+    font-family: 'Arial', sans-serif;
+    margin-top: 13%;
+    
+  }
+  
+  
+  
+  .home-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .main {
+    padding: 2rem;
+  }
+  
+  .mental-health-intro h1 {
+    color: #005eb8; /* NHS Blue */
+    margin-left: 5%;
+  }
+  
+  .mental-health-intro-title {
+    margin-bottom: 1rem;
+    font-size: 2.5em;
+  }
+  
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+  
+  .mental-health-intro article {
+    max-width: 600px;
+    margin-bottom: 2rem;
+    margin-left: 5%;
+  }
+  
+  .mind-plan {
+    background: #f0f4f5; /* Light grey background */
+    padding: 2rem;
+  }
+  
+  .mind-plan h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .mind-plan-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mind-plan-info h3 {
+    margin: 0;
+  }
+  
+  .mind-plan-info p {
+    margin-bottom: 1rem;
+  }
+  
+  .mind-plan-info button {
+    background-color: #007f3b; /* NHS Dark Green */
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .mind-plan-info button:hover {
+    background-color: #005eb8; /* NHS Blue */
+  }
+  
+  .mind-plan-image img {
+    max-width: 400px;
+    height: auto;
+  }
+  
+
