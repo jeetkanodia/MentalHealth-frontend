@@ -1,5 +1,5 @@
 import React from "react";
-import image1 from './Assets/mind-plan.png';
+import image1 from '../assets/mind-plan.png';
 
 import '../styles/home.css';
 const Home = () => {
