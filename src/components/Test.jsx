@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/test.css";
 import img from "../assets/react.svg";
+import Card from "./Card";
 
 const Test = () => {
   return (
@@ -19,42 +20,11 @@ const Test = () => {
         </div>
         <div className="test-right">{/* IMAGE HERE */}</div>
       </div>
-      <div className="test-caraosel-container">
-        <div
-          id="carouselExampleAutoplaying"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src={img} class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src={img} class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src={img} class="d-block w-100" alt="..." />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+      <div className="test-cards">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
     </div>
   );
