@@ -31,14 +31,15 @@
 .card-desc {
     font-size: 1rem;
     color: gray;
+    letter-spacing: 1px;
 }
 
 .card-btn {
     display: flex;
     justify-content: flex-end;
+    align-items: flex-end;
     margin-top: 20px;
     text-decoration: none;
-    width: auto;
 }
 
 .card-btn:hover {

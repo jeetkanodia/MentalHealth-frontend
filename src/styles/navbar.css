@@ -16,6 +16,11 @@
     flex: wrap;
 }
 
+.navbar-logo-link {
+    color: black;
+    text-decoration: none;
+}
+
 .navbar-link {
     color: #c11b1b;
     text-decoration: none;
