@@ -3,6 +3,12 @@ import "../styles/test.css";
 import img from "../assets/testimage.svg";
 import Card from "./Card";
 
+import stress from "../assets/stress-test.png";
+import anxious from "../assets/anxious-test.png";
+import sleep from "../assets/sleep-test.png";
+import sad from "../assets/sad-test.png";
+import workplace from "../assets/workplace-test.png";
+import happiness from "../assets/happy-test.png";
 const Test = () => {
   return (
     <div className="test-container">
@@ -28,41 +34,45 @@ const Test = () => {
           description={
             "Explore how stress has been taking a toll on your well-being. Take the assessment today!"
           }
+          img={stress}
           link={"/"}
         />
         <Card
-          heading={"Am i stressed"}
+          heading={"Am I Sad Or Depressed?"}
           description={
-            "Explore how stress has been taking a toll on your well-being. Take the assessment today!"
+            "Is it more than just feeling low? Take the assessment to find out."
           }
           link={"/"}
+          img={sad}
         />
         <Card
-          heading={"Am i stressed"}
+          heading={"How am I sleeping ?"}
           description={
-            "Explore how stress has been taking a toll on your well-being. Take the assessment today!"
+            "Are you getting the quality sleep you deserve? Know today by taking the assessment."
           }
           link={"/"}
+          img={sleep}
         />
         <Card
-          heading={"Am i stressed"}
+          heading={"Am I Anxious?"}
           description={
-            "Explore how stress has been taking a toll on your well-being. Take the assessment today!"
+            "Anxiety jitters never leave you. Take the self-check today to understand your anxiety better."
           }
           link={"/"}
+          img={anxious}
         />
         <Card
-          heading={"Am i stressed"}
-          description={
-            "Explore how stress has been taking a toll on your well-being. Take the assessment today!"
-          }
+          heading={"Happiness Scale"}
+          description={"Are you happy? Know today by taking the assessment."}
           link={"/"}
+          img={happiness}
         />
         <Card
-          heading={"Am i stressed"}
+          heading={"Workplace Stress Test"}
           description={
-            "Explore how stress has been taking a toll on your well-being. Take the assessment today!"
+            "Are you getting sick-listed due to work-related stress? Know today by taking the assessment"
           }
+          img={workplace}
           link={"/"}
         />
       </div>

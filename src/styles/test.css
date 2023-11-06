@@ -6,7 +6,7 @@
 .test-detail-section {
     display: flex;
     align-items: center;
-    height: 90vh;
+    height: 85vh;
 }
 
 .test-left {
@@ -25,4 +25,5 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    background-color: #eee;
 }
