@@ -1,13 +1,28 @@
 .test-container {
     padding-top: 15vh;
+    width: 100%;
 }
 
 .test-detail-section {
     display: flex;
     align-items: center;
-
+    height: 90vh;
 }
 
 .test-left {
     width: 50%;
+    margin-right: 50px;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.test-right {
+    width: 50%;
+}
+
+.test-cards {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 }
