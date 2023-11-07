@@ -4,6 +4,8 @@ import Test from "./components/Test";
 import Home from "./components/home/Home";
 import Login from "./components/Login";
 import Resources from "./components/Resources";
+import QuizPage from "./components/QuizPage";
+
 function App() {
   return (
     <>
@@ -14,6 +16,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/test" element={<Test />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/taketest/:test" element={<QuizPage />} />
         </Routes>
       </Router>
     </>

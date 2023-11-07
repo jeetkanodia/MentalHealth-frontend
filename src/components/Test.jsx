@@ -35,14 +35,14 @@ const Test = () => {
             "Explore how stress has been taking a toll on your well-being. Take the assessment today!"
           }
           img={stress}
-          link={"/stresstest"}
+          link={"/taketest/stress"}
         />
         <Card
           heading={"Am I Sad Or Depressed?"}
           description={
             "Is it more than just feeling low? Take the assessment to find out."
           }
-          link={"/depressiontest"}
+          link={"/taketest/sad"}
           img={sad}
         />
         <Card
@@ -50,7 +50,7 @@ const Test = () => {
           description={
             "Are you getting the quality sleep you deserve? Know today by taking the assessment."
           }
-          link={"/sleeptest"}
+          link={"/taketest/sleep"}
           img={sleep}
         />
         <Card
@@ -58,13 +58,13 @@ const Test = () => {
           description={
             "Anxiety jitters never leave you. Take the self-check today to understand your anxiety better."
           }
-          link={"/anxioustest"}
+          link={"/taketest/anxious"}
           img={anxious}
         />
         <Card
           heading={"Happiness Scale"}
           description={"Are you happy? Know today by taking the assessment."}
-          link={"/happinesstest"}
+          link={"/taketest/happiness"}
           img={happiness}
         />
         <Card
@@ -73,7 +73,7 @@ const Test = () => {
             "Are you getting sick-listed due to work-related stress? Know today by taking the assessment"
           }
           img={workplace}
-          link={"/workplacestresstest"}
+          link={"/taketest/workplace"}
         />
       </div>
     </div>
