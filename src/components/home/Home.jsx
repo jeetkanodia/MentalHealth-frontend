@@ -1,7 +1,7 @@
 import React from "react";
-import image1 from '../assets/mind-plan.png';
+import image1 from '../../assets/mind-plan.png';
 
-import '../styles/home.css';
+import '../../styles/home.css';
 const Home = () => {
   return (
     <div className="home">
