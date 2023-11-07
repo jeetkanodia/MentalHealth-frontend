@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-around;
     height: 15vh;
-    background-color: #eeeeee80;
+    background-color: #E3F4F4;
 }
 
 .navbar-links {
@@ -22,7 +22,6 @@
 }
 
 .navbar-link {
-    color: #c11b1b;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;

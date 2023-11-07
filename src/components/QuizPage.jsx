@@ -14,9 +14,7 @@ const QuizPage = () => {
       <div className="quiz-page-question">{questions[currentQuestion]}</div>
       <div className="quiz-answers">
         {/* have onclick handlers for these answers */}
-        <div onClick={handleClick} className="quiz-answer">
-          Very Often
-        </div>
+        <div className="quiz-answer">Very Often</div>
         <div className="quiz-answer">Sometimes</div>
         <div className="quiz-answer">Never</div>
       </div>
