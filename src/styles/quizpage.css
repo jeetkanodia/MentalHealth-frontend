@@ -42,3 +42,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
+
+.quiz-answer:hover {
+    background-color: #A3B1BD;
+}

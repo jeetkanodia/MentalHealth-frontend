@@ -1,22 +1,58 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { quizQuestions } from "./constants/quizquestions";
 import "../styles/quizpage.css";
+
 const QuizPage = () => {
+  const navigate = useNavigate();
   const { test } = useParams();
-  const title = quizQuestions[test].title;
-  const questions = quizQuestions[test].questions;
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
+  const [title, setTitle] = useState("");
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    if (!quizQuestions[test]) {
+      navigate("/");
+    } else {
+      setTitle(quizQuestions[test].title);
+      setQuestions(quizQuestions[test].questions);
+    }
+  }, []);
+
+  const handleClick = (answer) => {
+    // add to score
+    if (answer === "v") {
+      setScore(score + 2);
+    } else if (answer === "s") {
+      setScore(score + 1);
+    } else {
+      setScore(score + 0);
+    }
+    console.log(score);
+    // go to next question
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      navigate(`/`);
+    }
+  };
+
   return (
     <div className="quiz-page-container">
       <div className="quiz-page-title">{title}</div>
       <div className="quiz-page-question">{questions[currentQuestion]}</div>
       <div className="quiz-answers">
-        {/* have onclick handlers for these answers */}
-        <div className="quiz-answer">Very Often</div>
-        <div className="quiz-answer">Sometimes</div>
-        <div className="quiz-answer">Never</div>
+        <div onClick={() => handleClick("v")} className="quiz-answer">
+          Very Often
+        </div>
+        <div onClick={() => handleClick("s")} className="quiz-answer">
+          Sometimes
+        </div>
+        <div onClick={() => handleClick("n")} className="quiz-answer">
+          Never
+        </div>
       </div>
     </div>
   );
