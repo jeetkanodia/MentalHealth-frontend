@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Test from "./components/Test";
 import Home from "./components/home/Home";
 import Login from "./components/Login";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/taketest/:test" element={<QuizPage />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
