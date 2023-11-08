@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 90px;
     width: 600px;
     background: #fff;
     padding-bottom: 30px;
@@ -31,7 +31,7 @@
 }
 
 .inputs{
-    margin-top: 55px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -42,7 +42,7 @@
     display: flex;
     width: 480px;
     align-items: center;
-    height: 80px;
+    height: 60px;
     background: #eaeaea;
     border-radius: 6px;
 }
@@ -64,7 +64,7 @@
 .submit-container{
     display: flex;
     gap: 30px;
-    margin: 60px auto;
+    margin: 30px auto;
 }
 
 .submit{
@@ -72,7 +72,7 @@
     justify-content: center;
     align-items: center;
     width: 220px;
-    height: 59px;
+    height: 55px;
     color: #fff;
     background: #4c00b4;
     border-radius: 50px;

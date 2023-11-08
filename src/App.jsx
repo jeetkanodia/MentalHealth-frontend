@@ -5,6 +5,7 @@ import Home from "./components/home/Home";
 import Login from "./components/Login";
 import Resources from "./components/Resources";
 import QuizPage from "./components/QuizPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/taketest/:test" element={<QuizPage />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
