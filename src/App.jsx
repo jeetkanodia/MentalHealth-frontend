@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Resources from "./components/Resources";
 import QuizPage from "./components/QuizPage";
 import Results from "./components/Results";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/test" element={<Test />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/taketest/:test" element={<QuizPage />} />
           <Route path="/results" element={<Results />} />
         </Routes>
