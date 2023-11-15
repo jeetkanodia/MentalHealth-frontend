@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSignup } from "../hooks/useSignup";
 import user_icon from "../assets/person.png";
 import email_icon from "../assets/email.png";
 import password_icon from "../assets/password.png";
@@ -8,10 +9,11 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const { signup, error, isLoading } = useSignup();
   const handleSubmit = async (e) => {
+    if (isLoading) return;
     e.preventDefault();
-    console.log(name, email, password);
+    await signup(name, email, password);
   };
 
   return (
@@ -53,6 +55,7 @@ const Signup = () => {
             Sign Up
           </div>
         </div>
+        {error && <div className="error">{error}</div>}
       </div>
     </div>
   );
