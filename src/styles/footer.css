@@ -9,7 +9,7 @@
     justify-content: space-between;
     margin-top: 20px;
     margin-right: 150px;
-    margin-left: 150px;
+    margin-left: 180px;
   }
   
   .col-6 {
@@ -35,13 +35,14 @@
   
   h2 {
     margin-top: 10px;
-    font-size: 39px;
+    margin-left: 100px;
   }
   
   ul.list-unstyled {
     display: flex;
     padding: 0;
     list-style: none;
+    margin-left: 96px;
   }
   
   li img {
@@ -56,6 +57,9 @@
     padding-top: 1rem;
     text-align: center;
     font-size: 14px;
-    margin-bottom: 1rem;
+  }
+
+  .t1{
+    margin-left: 150px;
   }
   
