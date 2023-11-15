@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
-
+import { useLogout } from "../hooks/useLogout";
 const Navbar = () => {
+  const { logout } = useLogout();
+  const handleClick = () => {
+    logout();
+  };
   return (
     <div className="navbar-container">
       <div className="navbar-logo">
@@ -19,6 +23,10 @@ const Navbar = () => {
         </Link>
         <Link className="navbar-link" to="/test">
           <div> Take a Test</div>
+        </Link>
+
+        <Link onClick={handleClick} className="navbar-link">
+          <div>Logout</div>
         </Link>
         <Link className="navbar-link" to="/login">
           <div>Login</div>
