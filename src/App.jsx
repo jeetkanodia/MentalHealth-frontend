@@ -10,6 +10,8 @@ import Results from "./components/Results";
 import Signup from "./components/Signup";
 import CreatePost from "./components/home/post/createpost.jsx";
 import Blog from "./components/home/post/Blog.jsx";
+import Post from "./components/home/post/post.jsx";
+import Posts from "./components/home/post/posts.jsx";
 function App() {
   return (
     <>
@@ -25,6 +27,8 @@ function App() {
           <Route path="/results" element={<Results />} />
           <Route path="/createpost" element={<CreatePost />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/post" element={<Post />} />
+          <Route path="/posts" element={<Posts />} />
         </Routes>
         <Footer />
       </Router>
