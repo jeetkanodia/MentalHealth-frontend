@@ -7,11 +7,11 @@ import background from '../../assets/home-mental.jpg';
 
 const Image = styled(Box)`
     width: 100%;
-    background: url(${background}) center/90%;
-    height: 50vh;
+    background: url(${background}) center/82%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+   
     justify-content: center;
 `;
 
