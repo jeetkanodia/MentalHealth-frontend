@@ -2,14 +2,17 @@ import { useState } from "react";
 import email_icon from "../assets/email.png";
 import password_icon from "../assets/password.png";
 import "../styles/login.css";
+import { useLogin } from "../hooks/useLogin";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { login, error, isLoading } = useLogin();
 
   const handleSubmit = async (e) => {
+    if (isLoading) return;
     e.preventDefault();
-    console.log(email, password);
+    await login(email, password);
   };
 
   return (
@@ -43,6 +46,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      {error && <div className="error">{error}</div>}
     </div>
   );
 };

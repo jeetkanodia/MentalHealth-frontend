@@ -8,6 +8,7 @@ import Resources from "./components/Resources";
 import QuizPage from "./components/QuizPage";
 import Results from "./components/Results";
 import Signup from "./components/Signup";
+import CreatePost from "./components/home/post/createpost.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/taketest/:test" element={<QuizPage />} />
           <Route path="/results" element={<Results />} />
+          <Route path="/createpost" element={<CreatePost />} />
         </Routes>
         <Footer />
       </Router>
