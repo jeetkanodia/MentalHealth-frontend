@@ -1,4 +1,4 @@
-import { styled, Box, Typography } from "@mui/material";
+import { styled, Box, Typography, Card, CardContent } from "@mui/material";
 import React from "react";
 import { Posts } from "./static_blog_data";
 
@@ -24,10 +24,10 @@ const SubHeading = styled(Typography)`
   background: #ffffff;
 `;
 
-const PostContainer = styled(Box)`
-  margin-bottom: 20px;
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
+const CardContainer = styled(Card)`
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 `;
 
 const PostTitle = styled(Typography)`
@@ -58,14 +58,16 @@ const Blog = () => {
         <SubHeading>let others know what you have gone through ...</SubHeading>
       </Image>
       {Posts.map((post) => (
-        <PostContainer key={post.id}>
-          <PostTitle>{post.title}</PostTitle>
-          <PostContent>{post.content}</PostContent>
-          <PostMeta>
-            By {post.author} on {post.date}
-          </PostMeta>
-          <PostCategory>Category: {post.category}</PostCategory>
-        </PostContainer>
+        <CardContainer key={post.id}>
+          <CardContent>
+            <PostTitle>{post.title}</PostTitle>
+            <PostContent>{post.content}</PostContent>
+            <PostMeta>
+              By {post.author} on {post.date}
+            </PostMeta>
+            <PostCategory>Category: {post.category}</PostCategory>
+          </CardContent>
+        </CardContainer>
       ))}
     </div>
   );
