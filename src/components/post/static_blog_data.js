@@ -1,7 +1,7 @@
 export const Posts = [
   {
     id: 1,
-    title: "Understanding Anxiety",
+    title: "Balancing the budget",
     content: "Anxiety is a common mental health issue...",
     author: "John Doe",
     date: "November 15, 2023",
