@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import "../styles/gethelp.css";
 
 const ArticleCard = ({ title, image, content, link }) => (
-  <div className="col-sm-6 col-md-4">
+  <div className="col-sm-12 col-md-4">
     <div className="card mx-auto text-center">
       <img src={image} alt={title} />
       <div className="card-body">
@@ -40,7 +40,7 @@ const DoctorCard = ({ name, specialization, contact, reviews }) => {
   };
 
   return (
-    <div className="col-sm-6 col-md-4">
+    <div className="col-sm-12 col-md-4">
       <div className="card mx-auto text-center" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <div className="card-header" style={{ width: '100%' }}>
           <h4 className="my-0 font-weight-normal">{name}</h4>
