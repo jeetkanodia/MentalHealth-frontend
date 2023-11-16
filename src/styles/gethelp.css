@@ -1,5 +1,7 @@
   .card {
-    display: inline-block;
+    /* display: inline-block; */
+    flex: 0 0 calc(33.333% - 30px); /* Adjust width for three cards in a row */
+    max-width: calc(33.333% - 30px); /* Adjust max-width for responsiveness */
     /* flex-wrap: wrap; */
     /* justify-content: space-around; */
     width: 300px; 
@@ -40,6 +42,7 @@
   }
   @media (max-width: 768px) {
     .card {
-      padding: 10px; /* Adjusting padding for smaller screens */
+      flex: 0 0 calc(50% - 30px); /* Two cards in a row for smaller screens */
+      max-width: calc(50% - 30px);
     }
   }
