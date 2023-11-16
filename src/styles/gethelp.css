@@ -1,7 +1,7 @@
   .card {
     display: inline-block;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
     width: 300px; 
     margin: 15px;
     padding: 20px;
@@ -34,8 +34,9 @@
   }
   .row {
     display: flex; /* Ensure the row items align horizontally */
-    justify-content: space-between; /* Space items evenly across the row */
-    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allow items to wrap onto new lines */
+    justify-content: space-around; /* Space items evenly across the row */
+    margin: 0 -15px; /* Compensate for negative margins on columns */
   }
   @media (max-width: 768px) {
     .card {
