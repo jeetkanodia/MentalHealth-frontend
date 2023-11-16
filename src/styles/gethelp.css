@@ -40,7 +40,9 @@
     flex-wrap: wrap;
   }
   .container {
-    margin: 20px;
+    align-items: center;
+    margin: 5%;
+    margin-top: 120px;
     padding: 0%;
     width: auto; /* or a specific value */
     max-width: 100%
