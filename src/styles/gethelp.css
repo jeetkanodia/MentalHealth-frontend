@@ -34,4 +34,5 @@
   .row {
     display: flex; /* Ensure the row items align horizontally */
     justify-content: space-between; /* Space items evenly across the row */
+    justify-content: space-evenly;
   }

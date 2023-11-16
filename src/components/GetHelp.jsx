@@ -60,32 +60,25 @@ const GetHelp = () => {
   return (
     <div className="container">
       <h2>Articles</h2>
-
       <div className="row">
-        <div>
-          <ArticleCard
-            title="Understanding Mental Health"
-            image="https://example.com/image1.jpg"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            link="https://example.com/article1"
-          />
-        </div>
-        <div>
-          <ArticleCard
-            title="Coping Strategies for Stress"
-            image="https://example.com/image2.jpg"
-            content="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            link="https://example.com/article2"
-          />
-        </div>
-        <div>
-          <ArticleCard
-            title="Tips for a Healthy Mind"
-            image="https://example.com/image3.jpg"
-            content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
-            link="https://example.com/article3"
-          />
-        </div>
+        <ArticleCard
+          title="Understanding Mental Health"
+          image="https://example.com/image1.jpg"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          link="https://example.com/article1"
+        />
+        <ArticleCard
+          title="Coping Strategies for Stress"
+          image="https://example.com/image2.jpg"
+          content="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          link="https://example.com/article2"
+        />
+        <ArticleCard
+          title="Tips for a Healthy Mind"
+          image="https://example.com/image3.jpg"
+          content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+          link="https://example.com/article3"
+        />
       </div>
 
       <hr />
@@ -93,33 +86,28 @@ const GetHelp = () => {
       {/* Doctor Cards */}
       <h2>Find a Therapist</h2>
       <div className="row">
-        <div>
-          <DoctorCard
-            name="Dr. John Doe"
-            specialization="Psychiatrist"
-            contact="Email: john.doe@example.com | Phone: 123-456-7890"
-            reviews="Excellent therapist with a caring approach."
-          />
-        </div>
-        <div>
-          <DoctorCard
-            name="Dr. Jane Smith"
-            specialization="Clinical Psychologist"
-            contact="Email: jane.smith@example.com | Phone: 987-654-3210"
-            reviews="Very knowledgeable and empathetic."
-          />
-        </div>
-        <div>
-          <DoctorCard
-            name="Dr. Jane Smith"
-            specialization="Clinical Psychologist"
-            contact="Email: jane.smith@example.com | Phone: 987-654-3210"
-            reviews="Very knowledgeable and empathetic."
-          />
-        </div>
+        <DoctorCard
+          name="Dr. John Doe"
+          specialization="Psychiatrist"
+          contact="Email: john.doe@example.com | Phone: 123-456-7890"
+          reviews="Excellent therapist with a caring approach."
+        />
+        <DoctorCard
+          name="Dr. Jane Smith"
+          specialization="Clinical Psychologist"
+          contact="Email: jane.smith@example.com | Phone: 987-654-3210"
+          reviews="Very knowledgeable and empathetic."
+        />
+        <DoctorCard
+          name="Dr. Jane Smith"
+          specialization="Clinical Psychologist"
+          contact="Email: jane.smith@example.com | Phone: 987-654-3210"
+          reviews="Very knowledgeable and empathetic."
+        />
       </div>
     </div>
   );
 };
 
 export default GetHelp;
+
