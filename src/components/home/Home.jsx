@@ -1,11 +1,29 @@
 import React from "react";
 import image1 from '../../assets/mind-plan.png';
-
 import '../../styles/home.css';
+import { styled, Box, Typography } from '@mui/material';
+import background from '../../assets/home-mental.jpg';
+
+
+const Image = styled(Box)`
+    width: 100%;
+    background: url(${background}) center/82%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+`;
+
+
+
+
+
 const Home = () => {
   return (
     <div className="home">
       <main>
+        <Image>
         <section className="mental-health-intro">
           <h1 className="mental-health-intro-title">
             Every Mind Matters</h1>
@@ -19,7 +37,7 @@ const Home = () => {
             </p>
           </article>
         </section>
-
+        </Image>
         <section className="mind-plan">
           <h2>Do something now...</h2>
           <div className="mind-plan-content">
