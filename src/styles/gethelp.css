@@ -1,4 +1,4 @@
-  .card {
+.card {
     display: inline-block;
     /* flex-wrap: wrap; */
     /* justify-content: space-around; */
@@ -39,6 +39,3 @@
     margin: 0 -15px; /* Compensate for negative margins on columns */
     flex-wrap: wrap;
   }
-
-
-  
