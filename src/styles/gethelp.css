@@ -1,7 +1,5 @@
   .card {
-    /* display: inline-block; */
-    flex: 0 0 calc(33.333% - 30px); /* Adjust width for three cards in a row */
-    max-width: calc(33.333% - 30px); /* Adjust max-width for responsiveness */
+    display: inline-block;
     /* flex-wrap: wrap; */
     /* justify-content: space-around; */
     width: 300px; 
@@ -36,13 +34,11 @@
   }
   .row {
     display: flex; /* Ensure the row items align horizontally */
-    flex-wrap: wrap; /* Allow items to wrap onto new lines */
     justify-content: space-around; /* Space items evenly across the row */
+    /* justify-content: space-evenly; */
     margin: 0 -15px; /* Compensate for negative margins on columns */
+    flex-wrap: wrap;
   }
-  @media (max-width: 768px) {
-    .card {
-      flex: 0 0 calc(50% - 30px); /* Two cards in a row for smaller screens */
-      max-width: calc(50% - 30px);
-    }
-  }
+
+
+  
