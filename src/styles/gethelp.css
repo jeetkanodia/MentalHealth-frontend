@@ -7,7 +7,8 @@
     padding: 20px;
     border: 1px solid #7b95ec;
     border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin-bottom: 20px; 
   }
 
   .card img {
@@ -35,4 +36,9 @@
     display: flex; /* Ensure the row items align horizontally */
     justify-content: space-between; /* Space items evenly across the row */
     justify-content: space-evenly;
+  }
+  @media (max-width: 768px) {
+    .card {
+      padding: 10px; /* Adjusting padding for smaller screens */
+    }
   }
