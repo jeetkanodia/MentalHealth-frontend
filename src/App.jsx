@@ -8,11 +8,10 @@ import GetHelp from "./components/GetHelp.jsx";
 import QuizPage from "./components/QuizPage";
 import Results from "./components/Results";
 import Signup from "./components/Signup";
-import CreatePost from "./components/home/post/createpost.jsx";
-import Blog from "./components/home/post/Blog.jsx";
-import Post from "./components/home/post/post.jsx";
-import Posts from "./components/home/post/posts.jsx";
-
+import CreatePost from "./components/post/createpost.jsx";
+import Blog from "./components/post/Blog.jsx";
+import Post from "./components/post/post.jsx";
+import YourComponent from "./components/post/yourcomponent.jsx";
 function App() {
   return (
     <>
@@ -29,7 +28,7 @@ function App() {
           <Route path="/createpost" element={<CreatePost />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/post" element={<Post />} />
-          <Route path="/posts" element={<Posts />} />
+          <Route path="/yourcomponent" element={<YourComponent />} />
         </Routes>
         <Footer />
       </Router>

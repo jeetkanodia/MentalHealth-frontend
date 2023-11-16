@@ -14,7 +14,7 @@ const Container = styled(Box)(({ theme }) => ({
 
 const Image = styled('img')({
     width: '100%',
-    height: '50vh',
+    height: '60vh',
     objectFit: 'cover'
 });
 
@@ -26,6 +26,7 @@ const StyledFormControl = styled(FormControl)`
 
 const InputTextField = styled(InputBase)`
     flex: 1;
+    margin-top: 10px;
     margin: 0 30px;
     font-size: 25px;
 `;
@@ -33,7 +34,7 @@ const InputTextField = styled(InputBase)`
 const Textarea = styled(TextareaAutosize)`
     width: 100%;
     border: none;
-    margin-top: 50px;
+    margin-top: 60px;
     font-size: 18px;
     &:focus-visible {
         outline: none;
@@ -56,7 +57,7 @@ const CreatePost = () => {
     const [post, setPost] = useState(initialPost);
     const [file, setFile] = useState('');
 
-    const url = post.picture ? post.picture : 'https://images.unsplash.com/photo-1543128639-4cb7e6eeef1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwc2V0dXB8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80';
+    const url = post.picture ? post.picture : 'https://images.pexels.com/photos/760721/pexels-photo-760721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
     
     useEffect(() => {
         const getImage = async () => { 
