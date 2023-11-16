@@ -1,5 +1,5 @@
 // import { useEffect, useState } from 'react';
-
+import { useEffect, useState } from 'react';
 // import { Grid, Box } from '@mui/material';
 // import { Link, useSearchParams } from 'react-router-dom';
 // import { posts } from './static_blog_data'
@@ -75,27 +75,27 @@ export default Posts;
 
 
 
-import React from 'react';
-import { Link, Grid, Box } from '@material-ui/core'; // Assuming you're using Material-UI
-import { Posts } from './static_blog_data'; // Import posts from your static data file
+// import React from 'react';
+// import { Link, Grid, Box } from '@material-ui/core'; // Assuming you're using Material-UI
+// import { Posts } from './static_blog_data'; // Import posts from your static data file
 
-const YourComponent = () => {
-  return (
-    <>
-      {
-        Posts?.length ? Posts.map(post => (
-          <Grid item lg={3} sm={4} xs={12} key={post._id}>
-            <Link style={{ textDecoration: 'none', color: 'inherit' }} to={`details/${post._id}`}>
-              {/* Make sure your post component is correctly referenced, it should be capitalized if it's a component */}
-              <post post={post} />
-            </Link>
-          </Grid>
-        )) : <Box style={{ color: '#878787', margin: '30px 80px', fontSize: 18 }}>
-          No data is available for selected category
-        </Box>
-      }
-    </>
-  );
-};
+// const YourComponent = () => {
+//   return (
+//     <>
+//       {
+//         Posts?.length ? Posts.map(post => (
+//           <Grid item lg={3} sm={4} xs={12} key={post._id}>
+//             <Link style={{ textDecoration: 'none', color: 'inherit' }} to={`details/${post._id}`}>
+//               {/* Make sure your post component is correctly referenced, it should be capitalized if it's a component */}
+//               <post post={post} />
+//             </Link>
+//           </Grid>
+//         )) : <Box style={{ color: '#878787', margin: '30px 80px', fontSize: 18 }}>
+//           No data is available for selected category
+//         </Box>
+//       }
+//     </>
+//   );
+// };
 
-export default YourComponent;
+// export default YourComponent;
