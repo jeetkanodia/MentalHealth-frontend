@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="navbar-logo">
         <Link className="navbar-logo-link" to="/">
-          <h1>Sukoon</h1>
+          <h1>WellMind</h1>
         </Link>
       </div>
       <div className="navbar-links">

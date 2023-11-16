@@ -19,15 +19,22 @@
 .navbar-logo-link {
     color: black;
     text-decoration: none;
+    font-style: oblique;
 }
 
 .navbar-link {
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .navbar-link:hover {
+    color: #645a5a;
+}
+.navbar-link:active{
+    color: #645a5a;
+}
+.navbar-link:focus{
     color: #645a5a;
 }
