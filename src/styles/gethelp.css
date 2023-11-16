@@ -39,3 +39,9 @@
     margin: 0 -15px; /* Compensate for negative margins on columns */
     flex-wrap: wrap;
   }
+  .container {
+    margin: 20px;
+    padding: 0%;
+    width: auto; /* or a specific value */
+    max-width: 100%
+  }
