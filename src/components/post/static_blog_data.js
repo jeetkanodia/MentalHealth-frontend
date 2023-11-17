@@ -5,7 +5,7 @@ export const myPosts = [
     content: "Anxiety is a common mental health issue...",
     author: "John Doe",
     date: "November 15, 2023",
-    category: "Anxiety"
+    category: "Anxiety",
   },
   // More posts
   {
@@ -14,8 +14,7 @@ export const myPosts = [
     content: "Depression is a common mental health issue...",
     author: "John Doe",
     date: "November 15, 2023",
-    category: "Depression"
-
+    category: "Depression",
   },
   {
     id: 3,
@@ -23,6 +22,6 @@ export const myPosts = [
     content: "Stress is a common mental health issue...",
     author: "John Doe",
     date: "November 15, 2023",
-    category: "Stress"
+    category: "Stress",
   },
 ];
