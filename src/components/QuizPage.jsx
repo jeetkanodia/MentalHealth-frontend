@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { quizQuestions } from "./constants/quizquestions";
+import { useScoreContext } from "../hooks/useScoreContext";
 import "../styles/quizpage.css";
 
 const QuizPage = () => {
+  const { dispatch } = useScoreContext();
   const navigate = useNavigate();
   const { test } = useParams();
-
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [title, setTitle] = useState("");
@@ -30,12 +31,18 @@ const QuizPage = () => {
     } else {
       setScore(score + 0);
     }
-    console.log(score);
+
     // go to next question
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
-      navigate(`/`);
+      // end of quiz
+      localStorage.setItem("score", JSON.stringify(score));
+      dispatch({
+        type: "UPDATE_SCORE",
+        payload: score,
+      });
+      navigate(`/results`);
     }
   };
 

@@ -25,6 +25,7 @@ const Test = () => {
       <div className="test-cards">
         {Tests.map((test) => (
           <Card
+            key={test.id}
             heading={test.heading}
             description={test.description}
             img={test.img}
