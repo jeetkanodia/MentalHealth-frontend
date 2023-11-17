@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/footer.css";
+import "../styles/Footer.css";
 
 const Footer = () => (
   <div className="container-fluid">
