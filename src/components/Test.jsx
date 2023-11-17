@@ -2,20 +2,14 @@ import React from "react";
 import "../styles/test.css";
 import img from "../assets/testimage.svg";
 import Card from "./Card";
+import { Tests } from "./constants/data";
 
-import stress from "../assets/stress-test.png";
-import anxious from "../assets/anxious-test.png";
-import sleep from "../assets/sleep-test.png";
-import sad from "../assets/sad-test.png";
-import workplace from "../assets/workplace-test.png";
-import happiness from "../assets/happy-test.png";
 const Test = () => {
   return (
     <div className="test-container">
       <div className="test-detail-section">
         <div className="test-left">
-          <h1>Assessment</h1>
-          <p>Take a Free Mental Health Test</p>
+          <h1>Discover Your State of Mind</h1>
           <p>
             We can't improve what we don't measure, this couldn't be more
             accurate for mental health. It's time to change that, get in touch
@@ -29,52 +23,14 @@ const Test = () => {
         </div>
       </div>
       <div className="test-cards">
-        <Card
-          heading={"Am i stressed"}
-          description={
-            "Explore how stress has been taking a toll on your well-being. Take the assessment today!"
-          }
-          img={stress}
-          link={"/taketest/stress"}
-        />
-        <Card
-          heading={"Am I Sad Or Depressed?"}
-          description={
-            "Is it more than just feeling low? Take the assessment to find out."
-          }
-          link={"/taketest/sad"}
-          img={sad}
-        />
-        <Card
-          heading={"How am I sleeping ?"}
-          description={
-            "Are you getting the quality sleep you deserve? Know today by taking the assessment."
-          }
-          link={"/taketest/sleep"}
-          img={sleep}
-        />
-        <Card
-          heading={"Am I Anxious?"}
-          description={
-            "Anxiety jitters never leave you. Take the self-check today to understand your anxiety better."
-          }
-          link={"/taketest/anxious"}
-          img={anxious}
-        />
-        <Card
-          heading={"Happiness Scale"}
-          description={"Are you happy? Know today by taking the assessment."}
-          link={"/taketest/happiness"}
-          img={happiness}
-        />
-        <Card
-          heading={"Workplace Stress Test"}
-          description={
-            "Are you getting sick-listed due to work-related stress? Know today by taking the assessment"
-          }
-          img={workplace}
-          link={"/taketest/workplace"}
-        />
+        {Tests.map((test) => (
+          <Card
+            heading={test.heading}
+            description={test.description}
+            img={test.img}
+            link={test.link}
+          />
+        ))}
       </div>
     </div>
   );
