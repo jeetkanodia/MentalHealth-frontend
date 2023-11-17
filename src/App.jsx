@@ -11,7 +11,7 @@ import Signup from "./components/Signup";
 import CreatePost from "./components/post/createpost.jsx";
 import Blog from "./components/post/Blog.jsx";
 import Post from "./components/post/post.jsx";
-import YourComponent from "./components/post/yourcomponent.jsx";
+import Posts from "./components/post/Posts.jsx";
 function App() {
   return (
     <>
@@ -28,7 +28,7 @@ function App() {
           <Route path="/createpost" element={<CreatePost />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/post" element={<Post />} />
-          <Route path="/yourcomponent" element={<YourComponent />} />
+          <Route path="/Posts" element={<Posts />} />
         </Routes>
         <Footer />
       </Router>

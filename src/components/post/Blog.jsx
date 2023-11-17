@@ -1,6 +1,6 @@
 import { styled, Box, Typography, Card, CardContent } from "@mui/material";
 import React from "react";
-import { Posts } from "./static_blog_data";
+import { myPosts as Posts } from "./static_blog_data";
 
 const Image = styled(Box)`
   width: 100%;

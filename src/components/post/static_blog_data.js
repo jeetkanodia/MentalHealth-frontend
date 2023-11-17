@@ -1,4 +1,4 @@
-export const Posts = [
+export const myPosts = [
   {
     id: 1,
     title: "Balancing the budget",
