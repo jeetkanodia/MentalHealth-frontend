@@ -35,14 +35,13 @@
   
   h2 {
     margin-top: 10px;
-    margin-left: 100px;
+    font-size: 39px;
   }
   
   ul.list-unstyled {
     display: flex;
     padding: 0;
     list-style: none;
-    margin-left: 96px;
   }
   
   li img {
@@ -57,9 +56,6 @@
     padding-top: 1rem;
     text-align: center;
     font-size: 14px;
-  }
-
-  .t1{
-    margin-left: 150px;
+    margin-bottom: 1rem;
   }
   
