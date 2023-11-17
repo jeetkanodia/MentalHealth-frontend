@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import email_icon from "../assets/email.png";
 import password_icon from "../assets/password.png";
 import "../styles/login.css";
 import { useLogin } from "../hooks/useLogin";
-
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 const Login = () => {
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, error, isLoading } = useLogin();
@@ -14,6 +17,13 @@ const Login = () => {
     e.preventDefault();
     await login(email, password);
   };
+
+  useEffect(() => {
+    // reroute to home page after login
+    if (localStorage.getItem("user")) {
+      navigate("/");
+    }
+  }, [user]);
 
   return (
     <div className="container">

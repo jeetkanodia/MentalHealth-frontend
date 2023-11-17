@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { useAuthContext } from "./useAuthContext";
 
+import { API_URL } from "../components/constants/data";
+
 export const useLogin = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(null);
   const { dispatch } = useAuthContext();
-  const API = import.meta.env.VITE_API_ADDRESS;
 
   const login = async (email, password) => {
     setIsLoading(true);
     setError(null);
-    const response = await fetch(`${API}/api/user/login`, {
+    const response = await fetch(`${API_URL}/api/user/login`, {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {

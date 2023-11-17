@@ -5,6 +5,8 @@ import sad from "../../assets/sad-test.png";
 import workplace from "../../assets/workplace-test.png";
 import happiness from "../../assets/happy-test.png";
 
+export const API_URL = "https://mental-health-backend-jeetkanodia.vercel.app";
+
 export const categories = [
   { id: 1, type: "Depression" },
   { id: 2, type: "PTSD" },
