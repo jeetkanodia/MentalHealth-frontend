@@ -9,6 +9,7 @@ export const API_URL = "https://mental-health-backend-jeetkanodia.vercel.app";
 
 export const categories = [
   { id: 1, type: "Depression" },
+  { id: 6, type: "Stress" },
   { id: 2, type: "PTSD" },
   { id: 3, type: "Molestation" },
   { id: 4, type: "Anxiety" },
