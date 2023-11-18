@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Assuming you're using React Router
-import { Grid, Box } from '@material-ui/core';
 import { myPosts as staticPosts } from './static_blog_data'; // Import posts from your static data file
 import Post from './post'; // Make sure to import your Post component
 
