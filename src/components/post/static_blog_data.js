@@ -2,7 +2,7 @@ export const myPosts = [
   {
     id: 1,
     title: "Balancing the budget",
-    content: "Anxiety is a common mental health issue...",
+    content: "",
     author: "John Doe",
     date: "November 15, 2023",
     category: "Anxiety",
