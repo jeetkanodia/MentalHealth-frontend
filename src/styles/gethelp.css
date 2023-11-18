@@ -53,10 +53,11 @@
   }
   .page-container {
     /* Set the background image and overlay gradient */
-    background-image: url('https://images.pexels.com/photos/5326909/pexels-photo-5326909.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Replace with your image URL */
+    /* background-image: url('https://images.pexels.com/photos/5326909/pexels-photo-5326909.jpeg?auto=compress&cs=tinysrgb&w=600'); Replace with your image URL */
     background-size: cover; /* Adjust as needed */
     background-position: center; /* Adjust as needed */
     position: relative;
+    background-image: linear-gradient(#edecab,#edabc6, #d1aada, #c6ade6);
   }
   
   /* Overlay gradient */
