@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/gethelp.css";
 
+
 const ArticleCard = ({ title, image, content, link }) => (
   <div className="col-sm-12 col-md-4 mb-3">
     <div className="card mx-auto text-center box-style">
+      
       <img src={image} alt={title} />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{content}</p>
+        
         <a href={link} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
           Read Article
         </a>
@@ -15,9 +18,9 @@ const ArticleCard = ({ title, image, content, link }) => (
     </div>
   </div>
 );
-// hgvhju
 
-const DoctorCard = ({ name, specialization, contact, reviews }) => {
+
+const DoctorCard = ({ name, specialization, contact, reviews, image }) => {
   const [showReviews, setShowReviews] = useState(false);
 
   useEffect(() => {
@@ -46,6 +49,7 @@ const DoctorCard = ({ name, specialization, contact, reviews }) => {
           <h4 className="my-0 font-weight-normal">{name}</h4>
         </div>
         <div className="card-body">
+        <img src={image} alt={name} className="doctor-image" />  
           <p className="card-text">{specialization}</p>
           <p className="card-text">{contact}</p>
           {showReviews && <p className="card-text">{reviews}</p>}
@@ -58,8 +62,10 @@ const DoctorCard = ({ name, specialization, contact, reviews }) => {
 
 const GetHelp = () => {
   return (
+    <div className="page-container">
     <div className="gethelp-container ">
-      <h2>Articles</h2>
+      <br/>
+      <h1><b>Articles</b></h1>
       <div className="row">
         <ArticleCard 
           title="Understanding Mental Health"
@@ -84,27 +90,35 @@ const GetHelp = () => {
       <hr />
 
       {/* Doctor Cards */}
-      <h2>Find a Therapist</h2>
+      <br/>
+      <h1><b>Find a Therapist</b></h1>
+      <i>
       <div className="row">
         <DoctorCard
           name="Dr. John Doe"
           specialization="Psychiatrist"
-          contact="Email: john.doe@example.com | Phone: 123-456-7890"
+          contact="Email: john.doe@gmail.com | Phone: 123-456-7890"
           reviews="Excellent therapist with a caring approach."
+          image="data:image/jpeg;base64,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"
+        />
+        <DoctorCard
+          name="Dr. Michell Boult"
+          specialization="Clinical Therapist"
+          contact="Email: michell.boult@gmailcom | Phone: 765-241-3810"
+          reviews="Great service, very timely and professional."
+          image="data:image/jpeg;base64,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"
         />
         <DoctorCard
           name="Dr. Jane Smith"
-          specialization="Clinical Psychologist"
-          contact="Email: jane.smith@example.com | Phone: 987-654-3210"
-          reviews="Very knowledgeable and empathetic."
+         specialization="Clinical Psychologist"
+          contact="Email: jane.smith@gmail.com | Phone: 987-654-3210"
+          reviews="Very knowledgeable."
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJrziob5q8fqeGPfNXPk1URuaAeTE4Z7IXXA&usqp=CAU"
         />
-        <DoctorCard
-          name="Dr. Jane Smith"
-          specialization="Clinical Psychologist"
-          contact="Email: jane.smith@example.com | Phone: 987-654-3210"
-          reviews="Very knowledgeable and empathetic."
-        />
+        
       </div>
+      </i>
+    </div>
     </div>
   );
 };

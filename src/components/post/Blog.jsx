@@ -15,13 +15,19 @@ const Image = styled(Box)`
 
 const Heading = styled(Typography)`
   font-size: 70px;
-  background: #ffffff;
+  background: rgb(214, 210, 218);
   line-height: 1;
+  border-radius:5px;
+  padding: 15px;
 `;
 
 const SubHeading = styled(Typography)`
   font-size: 20px;
-  background: #ffffff;
+  background: rgb(214, 210, 218);
+  border-radius:5px;
+  padding-left:15px;
+  padding-right: 70px;
+  padding-bottom:3.5vh;
 `;
 
 const CardContainer = styled(Card)`

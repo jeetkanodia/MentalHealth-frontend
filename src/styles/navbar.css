@@ -6,7 +6,9 @@
     align-items: center;
     justify-content: space-around;
     height: 15vh;
-    background-color: #E3F4F4;
+    /* background-color: #E3F4F4; */
+    background-color: rgb(214, 192, 248);
+    /* background-color: #b4d9eb; */
 }
 
 .navbar-links {
