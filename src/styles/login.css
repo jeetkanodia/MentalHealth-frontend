@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -7,8 +7,9 @@
     background: #fff;
     padding-bottom: 30px;
 }
+
 /* trial */
-.header{
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,27 +18,27 @@
     margin-top: 30px;
 }
 
-.text{
+.text {
     color: #3c009d;
     font-size: 48px;
     font-weight: 700;
 }
 
-.underline{
+.underline {
     width: 61px;
     height: 6px;
     background: #3c009d;
     border-radius: 9px;
 }
 
-.inputs{
+.inputs {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.input{
+.input {
     margin: auto;
     display: flex;
     width: 480px;
@@ -47,11 +48,11 @@
     border-radius: 6px;
 }
 
-.input img{
+.input img {
     margin: 0px 30px;
 }
 
-.input input{
+.input input {
     height: 50px;
     width: 400px;
     background: transparent;
@@ -61,13 +62,13 @@
     font-size: 19px;
 }
 
-.submit-container{
+.submit-container {
     display: flex;
     gap: 30px;
     margin: 30px auto;
 }
 
-.submit{
+.submit {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,5 +79,14 @@
     border-radius: 50px;
     font-size: 19px;
     font-weight: 700;
+    cursor: pointer;
+}
+
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
     cursor: pointer;
 }
