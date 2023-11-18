@@ -79,6 +79,16 @@ const Blog = () => {
       cursor: 'pointer',
       fontSize: '16px',
     },
+    createPostButton: {
+      margin: '20px 25px',
+      padding: '10px 20px',
+      backgroundColor: '#4CAF50', // Change as needed
+      color: 'white',
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      textDecoration: 'none', // For Link component
+    }
   };
 
   return (
@@ -86,7 +96,15 @@ const Blog = () => {
       <Image>
         <Heading>Share your experience</Heading>
         <SubHeading>let others know what you have gone through ...</SubHeading>
-      </Image>
+
+        <button
+          style={styles.createPostButton}
+          onClick={() => window.location.href = '/createpost'} // Change this as needed
+        >
+          Make Your Own Blog
+        </button>
+  
+        </Image>
       <br />
 
       {/* Category Selector Container */}
@@ -105,7 +123,8 @@ const Blog = () => {
         </select>
       </div>
 
-      {/* Filtered Posts */}
+
+
       {Posts.filter(post => selectedCategory === 'All' || post.category === selectedCategory)
         .map((post) => (
           <CardContainer key={post.id}>

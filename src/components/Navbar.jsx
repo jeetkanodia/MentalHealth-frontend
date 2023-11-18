@@ -21,9 +21,6 @@ const Navbar = () => {
           <div>Blog</div>
         </Link>
 
-        <Link className="navbar-link" to="/createpost">
-          <div>Create Post</div>
-        </Link>
         <Link className="navbar-link" to="/gethelp">
           <div>Get Help</div>
         </Link>
