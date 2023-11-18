@@ -6,28 +6,28 @@ const Footer = () => (
     <footer>
       <div className="row">
         <div className="col-6 col-md-2 mb-3">
-          <h5 className="text-uppercase">Section</h5>
+          <h2 className="text-uppercase">Contact Us</h2>
           <ul className="nav flex-column">
             <li className="nav-item mb-2">
               <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
+                <h5>sukoon123@gmail.com</h5>
               </a>
             </li>
             <li className="nav-item mb-2">
               <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
+                <h5>9584XXXXXX</h5>
               </a>
             </li>
             <li className="nav-item mb-2">
               <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
+                <h5>Home</h5>
               </a>
             </li>
           </ul>
         </div>
 
         <div className="col-6 col-md-2 mb-3 t1">
-          <h5 className="text-uppercase">Section</h5>
+          <h2 className="text-uppercase">Section</h2>
           <ul className="nav flex-column">
             <li className="nav-item mb-2">
               <a href="#" className="nav-link p-0 text-body-secondary">

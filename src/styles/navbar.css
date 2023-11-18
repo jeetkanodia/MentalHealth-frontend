@@ -21,7 +21,7 @@
 .navbar-logo-link {
     color: black;
     text-decoration: none;
-    font-style: oblique;
+    /* font-style: oblique; */
 }
 
 .navbar-link {
@@ -39,4 +39,7 @@
 }
 .navbar-link:focus{
     color: #645a5a;
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
