@@ -12,6 +12,7 @@ import CreatePost from "./components/post/createpost.jsx";
 import Blog from "./components/post/Blog.jsx";
 import Post from "./components/post/post.jsx";
 import Posts from "./components/post/Posts.jsx";
+import DetailedPost from "./components/post/detailedpost.jsx";
 function App() {
   return (
     <>
@@ -29,6 +30,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/post" element={<Post />} />
           <Route path="/Posts" element={<Posts />} />
+          <Route path="/details/:postId" element={<DetailedPost />} />
         </Routes>
         <Footer />
       </Router>
