@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 90px;
-    width: 600px;
+    margin-top: 15vh;
+    width: 100%;
+    height: auto;
     background: #fff;
     padding-bottom: 30px;
 }
