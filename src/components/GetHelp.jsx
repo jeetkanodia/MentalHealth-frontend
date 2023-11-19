@@ -6,7 +6,7 @@ const ArticleCard = ({ title, image, content, link }) => (
   <div className="col-sm-12 col-md-4 mb-3">
     <div className="card mx-auto text-center box-style">
       
-      <img src={image} alt={title} />
+      <img src={image} alt={title} className="doctor-image" />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{content}</p>
@@ -50,7 +50,7 @@ const DoctorCard = ({ name, specialization, contact, reviews, image }) => {
         </div>
         <div className="card-body">
         <img src={image} alt={name} className="doctor-image" />  
-          <p className="card-text">{specialization}</p>
+          <p className="card-text doctorname">{specialization}</p>
           <p className="card-text">{contact}</p>
           {showReviews && <p className="card-text">{reviews}</p>}
           <button className="btn btn-primary">Book a Session</button>
@@ -65,7 +65,7 @@ const GetHelp = () => {
     <div className="page-container">
     <div className="gethelp-container ">
       <br/>
-      <h1><b>Articles</b></h1>
+      <h1 className="font-style">Articles</h1>
       <div className="row">
         <ArticleCard 
           title="Understanding Mental Health"
@@ -91,8 +91,7 @@ const GetHelp = () => {
 
       {/* Doctor Cards */}
       <br/>
-      <h1><b>Find a Therapist</b></h1>
-      <i>
+      <h1 className="font-style">Find a Therapist</h1>
       <div className="row">
         <DoctorCard
           name="Dr. John Doe"
@@ -114,9 +113,7 @@ const GetHelp = () => {
           reviews="Very knowledgeable."
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJrziob5q8fqeGPfNXPk1URuaAeTE4Z7IXXA&usqp=CAU"
         />
-        
       </div>
-      </i>
     </div>
     </div>
   );
