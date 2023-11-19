@@ -8,13 +8,13 @@ import { categories } from '../constants/data'; // Import categories
 const Container = styled(Box)(({ theme }) => ({
     margin: '50px 100px',
     [theme.breakpoints.down('md')]: {
-        margin: 0
+        margin: 0 
     }
 }));
 
 const Image = styled('img')({
     width: '100%',
-    height: '60vh',
+    height: '50vh',
     objectFit: 'cover'
 });
 
@@ -22,6 +22,7 @@ const StyledFormControl = styled(FormControl)`
     margin-top: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 `;
 
 const InputTextField = styled(InputBase)`

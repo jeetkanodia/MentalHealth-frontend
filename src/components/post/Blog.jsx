@@ -4,6 +4,7 @@ import { myPosts as Posts } from "./static_blog_data";
 import  { useState } from 'react';
 import { categories } from '../constants/data';
 const Image = styled(Box)`
+  margin-top: 36px;
   width: 100%;
   background: url(https://images.pexels.com/photos/5993624/pexels-photo-5993624.jpeg)
     center/55% repeat-x #000;

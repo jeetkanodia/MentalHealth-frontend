@@ -12,7 +12,7 @@ export const myPosts = [
   // More posts
   {
     id: 2,
-    title: "Understanding Depression",
+    title: "Depression makes me feel like a failure",
     content: "Depression is a common mental health issue...",
     author: "John Doe",
     date: "November 15, 2023",
@@ -20,10 +20,37 @@ export const myPosts = [
   },
   {
     id: 3,
-    title: "Understanding Stress",
+    title: " Stress causes and ways to deal with",
     content: "Stress is a common mental health issue...",
     author: "John Doe",
     date: "November 15, 2023",
     category: "Stress",
   },
+  {
+    id: 4,
+    title: "Ways to deal with Anxiety",
+    content: "Anxiety is a common mental health issue...",
+    author: "paul",
+    date: "November 15, 2023",
+    category: "Anxiety",
+  },
+  {
+    id: 5,
+    title: "PTSD and how I wanted to end it all",
+    content: "PTSD is a common mental health issue...",
+    author: "jenny",
+    date: "November 15, 2023",
+    category: "PTSD",
+  },
+
+  {
+    id: 6,
+    title: "How to deal with PTSD",
+    content: "PTSD is a common mental health issue...",
+    author: "shawn",
+    date: "November 15, 2023",
+    category: "PTSD",
+  },
+  
+
 ];
