@@ -70,6 +70,11 @@ const Blog = () => {
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
+  const handleCardClick = (postId) => {
+    // Example: navigate to a detailed post view
+    window.location.href = `/post/${postId}`;
+  };
+  
 
   // Inline styles
   const styles = {
@@ -139,7 +144,7 @@ const Blog = () => {
     
       {Posts.filter(post => selectedCategory === 'All' || post.category === selectedCategory)
         .map((post) => (
-          <CardContainer key={post.id}>
+          <CardContainer key={post.id} onClick={() => handleCardClick(post.id)}>
             <CardContent>
               <PostTitle>{post.title}</PostTitle>
               <PostContent>{post.content}</PostContent>
