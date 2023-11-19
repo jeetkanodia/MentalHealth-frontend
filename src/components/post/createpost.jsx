@@ -11,7 +11,7 @@ import {
   TextareaAutosize,
 } from "@mui/material";
 import { AddCircle as Add } from "@mui/icons-material";
-import { categories } from "../constants/data"; // Import categories
+import { categories, API_URL } from "../constants/data"; // Import categories
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useLocation } from "react-router-dom";
 
@@ -76,15 +76,19 @@ const CreatePost = () => {
       username: user.name,
       title,
       description,
-      categories: category,
+      category: category,
     };
-    await fetch("http://localhost:5000/api/posts", {
+    const response = await fetch(`${API_URL}/api/blogs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
       },
       body: JSON.stringify(data),
     });
+    if (response.ok) {
+      window.location.href = "/blog";
+    }
   };
 
   return (
