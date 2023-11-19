@@ -7,7 +7,7 @@
     justify-content: space-around;
     height: 15vh;
     /* background-color: #E3F4F4; */
-    background-color: rgb(214, 192, 248);
+    background-color: #b2e3d5
     /* background-color: #b4d9eb; */
 }
 
@@ -16,6 +16,7 @@
     justify-content: space-around;
     width: 60%;
     flex: wrap;
+    /* color: #42ba97; */
 }
 
 .navbar-logo-link {
@@ -28,14 +29,15 @@
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
+    color: #215d4b;
 }
 
 .navbar-link:hover {
     color: #645a5a;
 }
 .navbar-link:active{
-    color: #645a5a;
+    color: #42ba97;
 }
 .navbar-link:focus{
     color: #645a5a;
