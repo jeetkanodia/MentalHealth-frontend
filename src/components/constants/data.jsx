@@ -68,17 +68,17 @@ export const Tests = [
 
 export const resultCardData = [
   {
-    heading: "Score of 0-4",
+    heading: "Score of 0-6",
     description:
       "Your level of depression and sadness is low. However, everyone feels sad or blue at times. You can take action to protect your mental health for up-to 7 days on your own.",
   },
   {
-    heading: "Score of 5-9",
+    heading: "Score of 7-12",
     description:
       "Your level of depression and sadness is moderate. If your symptoms continue, consider speaking to a mental health professional.",
   },
   {
-    heading: "Score of 10-14",
+    heading: "Score of 13-18",
     description:
       "Your level of depression and sadness is high. You should strongly consider talking to a mental health professional.",
   },
