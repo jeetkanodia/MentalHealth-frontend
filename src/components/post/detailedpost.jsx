@@ -49,8 +49,12 @@ import '../../styles/detailedpost.css';const DetailedPost = () => {
     return (
       <Box className="detailed-post-container">
         <Typography variant="h3" className="detailed-post-title">{post.title}</Typography>
+        <br />
         <Typography variant="body1" className="detailed-post-description">{post.description}</Typography>
-        {/* You can add more elements here for comments, upvotes, etc. */}
+        <Typography variant="body2" className="detailed-post-made-by">Written by {post.username}</Typography>
+        <Typography variant="body2" className="detailed-post-date">{post.date}</Typography>
+
+       
       </Box>
     );
   };

@@ -1,28 +1,56 @@
-/* DetailedPost.css */
 .detailed-post-container {
-    margin: 20px;
-    margin-top: 10%;
+    margin-top: 15%; /* Adjust according to your navbar height */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: white;
+    background-color: #f4f4f4; /* Light grey background */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 70%; /* Adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15%;
 }
 
 .detailed-post-title {
-    margin-bottom: 20px;
-    color: #333;
-    white-space: normal;
+    color: #333; /* Dark text for contrast */
+    font-size: 28px;
+    margin-bottom: 10px;  
+      white-space: normal;
     word-wrap: break-word;
+    font-weight: bold;
 }
 
 .detailed-post-description {
-    margin-bottom: 20px;
-    color: #555;
+    color: #555; /* Slightly lighter text for the body */
+    font-size: 16px;
     line-height: 1.6;
+    margin-bottom: 15px;
+    white-space: normal;
+    word-wrap: break-word;
+
 }
 
-.detailed-post-meta {
-    margin-bottom: 10px;
-    color: #777;
-    font-style: italic;
+.detailed-post-made-by,
+.detailed-post-date {
+    color: #888; /* Lighter text for metadata */
+    font-size: 14px;
+    margin-bottom: 5px;
+    white-space: normal;
+    word-wrap: break-word;
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .detailed-post-container {
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    .detailed-post-title {
+        font-size: 24px;
+    }
+
+    .detailed-post-description {
+        font-size: 14px;
+    }
 }
