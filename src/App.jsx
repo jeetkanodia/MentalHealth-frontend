@@ -30,7 +30,7 @@ function App() {
           <Route path="/createpost" element={<CreatePost />} /> {/* done */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/details/:postId" element={<DetailedPost />} />
-          <Route component={NotFoundPage} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
         <Toaster />
