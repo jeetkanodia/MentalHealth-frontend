@@ -1,8 +1,10 @@
+
+
 export const myPosts = [
   {
     id: 1,
     title: "21 M, Is this really it?",
-    content: "asdasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    content: "../Allblogs/blog1.txt",
     author: "John Doe",
     date: "November 15, 2023",
     category: "Anxiety",
