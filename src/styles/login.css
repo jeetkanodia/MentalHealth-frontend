@@ -1,12 +1,18 @@
 .container {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    /* margin: auto; */
     margin-top: 15vh;
+    margin-left: 0;
+    margin-right: 0;
     width: 100%;
+    max-width: 1000vh;
     height: auto;
-    background: #fff;
+    /* background: #fff; */
     padding-bottom: 30px;
+    background-image: linear-gradient(rgb(212, 228, 243), rgb(189, 235, 240),rgb(238, 249, 201));
+    background-size: cover; /* Ensure the gradient covers the entire container */
+    background-repeat: no-repeat;
 }
 
 /* trial */
@@ -20,7 +26,7 @@
 }
 
 .text {
-    color: #3c009d;
+    color: #215d4b;
     font-size: 48px;
     font-weight: 700;
 }
@@ -28,7 +34,7 @@
 .underline {
     width: 61px;
     height: 6px;
-    background: #3c009d;
+    background: #215d4b;
     border-radius: 9px;
 }
 
@@ -76,7 +82,7 @@
     width: 220px;
     height: 55px;
     color: #fff;
-    background: #4c00b4;
+    background: #215d4b;
     border-radius: 50px;
     font-size: 19px;
     font-weight: 700;
