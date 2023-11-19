@@ -29,7 +29,7 @@ export const Tests = [
     id: 2,
     heading: "Am I Sad Or Depressed?",
     description:
-      "Is it more than just feeling low? Take the assessment to find out.",
+      "Is it more than just feeling low and having bad days? Take the assessment to find out.",
     img: sad,
     link: "/taketest/sad",
   },
@@ -52,7 +52,7 @@ export const Tests = [
   {
     id: 5,
     heading: "Happiness Scale",
-    description: "Are you happy? Know today by taking the assessment.",
+    description: "Are you truly happy with your life, or do you feel there's room for improvement? Know today by taking the assessment.",
     img: happiness,
     link: "/taketest/happiness",
   },

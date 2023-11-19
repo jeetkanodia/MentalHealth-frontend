@@ -1,21 +1,18 @@
 .container {
     display: flex;
     flex-direction: column;
-    /* margin: auto; */
     margin-top: 15vh;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
     max-width: 1000vh;
     height: auto;
-    /* background: #fff; */
     padding-bottom: 30px;
     background-image: linear-gradient(rgb(212, 228, 243), rgb(189, 235, 240),rgb(238, 249, 201));
-    background-size: cover; /* Ensure the gradient covers the entire container */
+    background-size: cover; 
     background-repeat: no-repeat;
 }
 
-/* trial */
 .header {
     display: flex;
     flex-direction: column;

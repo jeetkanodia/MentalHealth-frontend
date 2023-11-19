@@ -1,6 +1,8 @@
 .test-container {
-    padding-top: 15vh;
+    padding-top: 5vh;
     width: 100%;
+    background: aliceblue;
+    background-image: linear-gradient(rgb(229, 237, 203), rgb(98, 202, 214));
 }
 
 .test-detail-section {
@@ -26,4 +28,6 @@
     display: flex;
     flex-wrap: wrap;
     background-color: #eee;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
