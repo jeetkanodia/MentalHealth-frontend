@@ -35,6 +35,11 @@ const CardContainer = styled(Card)`
   margin: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+
+  &:hover {
+    background-color: #f0f0f0; // Change as needed
+    transform: scale(1.005);
 `;
 
 const PostTitle = styled(Typography)`
