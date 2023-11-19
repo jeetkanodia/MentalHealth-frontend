@@ -135,13 +135,6 @@ const Blog = () => {
       <Image>
         <Heading>Share your experience</Heading>
         <SubHeading>let others know what you have gone through ...</SubHeading>
-
-        <button
-          style={styles.createPostButton}
-          onClick={() => (window.location.href = "/createpost")} // Change this as needed
-        >
-          Make Your Own Blog
-        </button>
       </Image>
       <br />
 
@@ -163,6 +156,12 @@ const Blog = () => {
             </option>
           ))}
         </select>
+        <button
+          style={styles.createPostButton}
+          onClick={() => (window.location.href = "/createpost")} // Change this as needed
+        >
+          Write a Blog
+        </button>
       </div>
 
       {Posts.filter(
