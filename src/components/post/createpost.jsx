@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
-
-import { styled, Box, TextareaAutosize, Button, InputBase, FormControl  } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { styled, Box, InputBase, Button, FormControl, Select, MenuItem, InputLabel, TextareaAutosize } from '@mui/material';
 import { AddCircle as Add } from '@mui/icons-material';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { categories } from '../constants/data'; // Import categories
 
 
 const Container = styled(Box)(({ theme }) => ({
@@ -91,7 +91,22 @@ const CreatePost = () => {
                     onChange={(e) => setFile(e.target.files[0])}
                 />
                 <InputTextField onChange={(e) => handleChange(e)} name='title' placeholder="Title" />
-                <Button onClick={() => savePost()} variant="contained" color="primary">Publish</Button>
+                <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel id="category-select-label">Category</InputLabel>
+                    <Select
+                        labelId="category-select-label"
+                        id="category-select"
+                        value={post.category}
+                        label="Category"
+                        onChange={(e) => handleChange({ target: { name: 'category', value: e.target.value } })}
+                    >
+                        {categories.map((category, index) => (
+                            <MenuItem key={index} value={category.type}>{category.type}</MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+
+                <Button onClick={() => setPost()} variant="contained" color="primary" height="10px" >Publish</Button>
             </StyledFormControl>
 
             <Textarea
