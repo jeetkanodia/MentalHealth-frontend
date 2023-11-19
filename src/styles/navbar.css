@@ -16,7 +16,7 @@
     justify-content: space-around;
     width: 60%;
     flex: wrap;
-    /* color: #42ba97; */
+    color: #42ba97 !important;
 }
 
 .navbar-logo-link {
@@ -29,7 +29,7 @@
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 19px;
     color: #215d4b;
 }
 
@@ -37,10 +37,10 @@
     color: #645a5a;
 }
 .navbar-link:active{
-    color: #42ba97;
+    color: rgb(186, 66, 180);
 }
 .navbar-link:focus{
-    color: #645a5a;
+    color: rgb(36, 67, 190);
 }
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

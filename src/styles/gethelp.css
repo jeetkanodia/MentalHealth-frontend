@@ -42,14 +42,16 @@
   }
   .gethelp-container {
     align-items: center;
-    margin: 5%;
+    /* margin: 5%; */
     margin-top: 120px;
+    margin-left: 17vh;
+    margin-bottom: 1vh;
     padding: 0%;
     width: auto; /* or a specific value */
     max-width: 100%;
   }
   .box-style{
-    background-color: #c1d8e4;
+    background-color: #acd4ea;
   }
   .page-container {
     /* Set the background image and overlay gradient */
@@ -57,7 +59,7 @@
     background-size: cover; /* Adjust as needed */
     background-position: center; /* Adjust as needed */
     position: relative;
-    background-image: linear-gradient(#edecab,#edabc6, #d1aada, #c6ade6);
+    background-image: linear-gradient(#edecab,rgb(164, 203, 239),#78d2c2, rgb(189, 235, 240),#e7e6a2);
   }
   
   /* Overlay gradient */
