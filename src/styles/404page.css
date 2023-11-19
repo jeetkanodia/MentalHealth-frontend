@@ -4,7 +4,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full height of the viewport */
+    height: 55vh;
+    margin-top: 15vh;
+    /* Full height of the viewport */
     text-align: center;
 }
 
