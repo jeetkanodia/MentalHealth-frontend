@@ -3,7 +3,7 @@
     height: 70vh;
     width: 100%;
     /* background-color: #F8F6F4; */
-    background-image: linear-gradient(rgb(228, 244, 177) 18%,rgb(183, 207, 228), rgb(199, 228, 231),rgb(238, 249, 201));
+    background-image: linear-gradient(rgb(228, 244, 177) 10%,rgb(210, 228, 244), rgb(200, 233, 237),rgb(240, 249, 213));
 }
 
 .quiz-page-title {
