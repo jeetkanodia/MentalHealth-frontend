@@ -8,11 +8,11 @@ import GetHelp from "./components/GetHelp.jsx";
 import QuizPage from "./components/QuizPage";
 import Results from "./components/Results";
 import Signup from "./components/Signup";
-import CreatePost from "./components/post/createpost.jsx";
 import Blog from "./components/post/Blog.jsx";
 import Post from "./components/post/post.jsx";
 import Posts from "./components/post/Posts.jsx";
 import DetailedPost from "./components/post/detailedpost.jsx";
+import CreatePost from "./components/post/createpost.jsx";
 function App() {
   return (
     <>

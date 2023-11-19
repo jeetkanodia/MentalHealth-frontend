@@ -1,123 +1,139 @@
-import React, { useState, useEffect } from 'react';
-import { styled, Box, InputBase, Button, FormControl, Select, MenuItem, InputLabel, TextareaAutosize } from '@mui/material';
-import { AddCircle as Add } from '@mui/icons-material';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { categories } from '../constants/data'; // Import categories
-
+import React, { useState, useEffect } from "react";
+import {
+  styled,
+  Box,
+  InputBase,
+  Button,
+  FormControl,
+  Select,
+  MenuItem,
+  InputLabel,
+  TextareaAutosize,
+} from "@mui/material";
+import { AddCircle as Add } from "@mui/icons-material";
+import { categories } from "../constants/data"; // Import categories
+import { useAuthContext } from "../../hooks/useAuthContext";
+import { useLocation } from "react-router-dom";
 
 const Container = styled(Box)(({ theme }) => ({
-    margin: '50px 100px',
-    [theme.breakpoints.down('md')]: {
-        margin: 0 
-    }
+  height: "100vh",
+  margin: "50px 100px",
+  marginTop: "15vh",
+  [theme.breakpoints.down("md")]: {
+    margin: 0,
+  },
 }));
 
-const Image = styled('img')({
-    width: '100%',
-    height: '50vh',
-    objectFit: 'cover'
+const Image = styled("img")({
+  width: "100%",
+  height: "30vh",
+  margin: "20px 0",
+  objectFit: "cover",
 });
 
 const StyledFormControl = styled(FormControl)`
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 const InputTextField = styled(InputBase)`
-    flex: 1;
-    margin-top: 10px;
-    margin: 0 30px;
-    font-size: 25px;
+  flex: 1;
+  margin-top: 10px;
+  margin: 0 30px;
+  font-size: 25px;
 `;
 
 const Textarea = styled(TextareaAutosize)`
-    width: 100%;
-    border: none;
-    margin-top: 60px;
-    font-size: 18px;
-    &:focus-visible {
-        outline: none;
-    }
+  width: 100%;
+  border: none;
+  margin-top: 60px;
+  font-size: 18px;
+  &:focus-visible {
+    outline: none;
+  }
 `;
 
-const initialPost = {
-    title: '',
-    description: '',
-    picture: '',
-    username: '',
-    categories: '',
-    createdDate: new Date()
-}
-
 const CreatePost = () => {
-    const navigate = useNavigate();
-    const location = useLocation();
+  const url =
+    "https://images.pexels.com/photos/760721/pexels-photo-760721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 
-    const [post, setPost] = useState(initialPost);
-    const [file, setFile] = useState('');
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("Depression");
+  const { user } = useAuthContext();
 
-    const url = post.picture ? post.picture : 'https://images.pexels.com/photos/760721/pexels-photo-760721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
-    
-    useEffect(() => {
-        const getImage = async () => { 
-            if(file) {
-                const data = new FormData();
-                data.append("name", file.name);
-                data.append("file", file);
-                
-                post.picture = response.data;
-            }
-        }
-        getImage();
-        post.categories = location.search?.split('=')[1] || 'All';
-        //post.username = account.username;
-    }, [file])
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) {
+      window.location.href = "/login";
+    }
+  }, []);
 
-   
+  const setPost = async () => {
+    const data = {
+      username: user.name,
+      title,
+      description,
+      categories: category,
+    };
+    await fetch("http://localhost:5000/api/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  };
 
-    return (
-        <Container>
-            <Image src={url} alt="post" />
+  return (
+    <Container>
+      <Image src={url} alt="post" />
 
-            <StyledFormControl>
-                <label htmlFor="fileInput">
-                    <Add fontSize="large" color="action" />
-                </label>
-                <input
-                    type="file"
-                    id="fileInput"
-                    style={{ display: "none" }}
-                    onChange={(e) => setFile(e.target.files[0])}
-                />
-                <InputTextField onChange={(e) => handleChange(e)} name='title' placeholder="Title" />
-                <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
-                    <InputLabel id="category-select-label">Category</InputLabel>
-                    <Select
-                        labelId="category-select-label"
-                        id="category-select"
-                        value={post.category}
-                        label="Category"
-                        onChange={(e) => handleChange({ target: { name: 'category', value: e.target.value } })}
-                    >
-                        {categories.map((category, index) => (
-                            <MenuItem key={index} value={category.type}>{category.type}</MenuItem>
-                        ))}
-                    </Select>
-                </FormControl>
+      <StyledFormControl>
+        <InputTextField
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          name="title"
+          placeholder="Title"
+        />
+      </StyledFormControl>
 
-                <Button onClick={() => setPost()} variant="contained" color="primary" height="10px" >Publish</Button>
-            </StyledFormControl>
+      <Textarea
+        minRows={3}
+        placeholder="Tell your story..."
+        name="description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+      <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="category-select-label">Category</InputLabel>
+        <Select
+          labelId="category-select-label"
+          id="category-select"
+          value={category}
+          label="Category"
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          {categories.map((category, index) => (
+            <MenuItem key={index} value={category.type}>
+              {category.type}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
 
-            <Textarea
-                rowsMin={5}
-                placeholder="Tell your story..."
-                name='description'
-                onChange={(e) => handleChange(e)} 
-            />
-        </Container>
-    )
-}
+      <Button
+        onClick={() => setPost()}
+        variant="contained"
+        color="primary"
+        height="10px"
+      >
+        Publish
+      </Button>
+    </Container>
+  );
+};
 
 export default CreatePost;
