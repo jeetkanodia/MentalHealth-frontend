@@ -4,6 +4,7 @@ import { Box, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { API_URL } from "../constants/data";
 import { AuthContext } from "../../context/AuthContext";
+import "../../styles/detailedpost.css";
 import '../../styles/detailedpost.css';const DetailedPost = () => {
     const { postId } = useParams();
     const [post, setPost] = React.useState(null);
