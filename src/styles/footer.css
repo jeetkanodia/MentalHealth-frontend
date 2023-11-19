@@ -1,5 +1,5 @@
 .container-fluid {
-    background-color: rgb(203, 220, 244);
+    background-color: #E3F4F4;
     padding: 1rem;
   }
   
@@ -10,7 +10,6 @@
     margin-top: 20px;
     margin-right: 150px;
     margin-left: 150px;
-    color: black;
   }
   
   .col-6 {
@@ -29,7 +28,7 @@
   
   .nav-link {
     text-decoration: none;
-    /* color: #b0b0b0; */
+    color: #b0b0b0;
     padding: 0.25rem 0;
     display: block;
   }
@@ -59,12 +58,4 @@
     font-size: 14px;
     margin-bottom: 1rem;
   }
-  h5:hover{
-    color: rgb(115, 61, 120);
-  }
-  /* h5:active{
-    color: rgb(217, 208, 224);
-  }
-  h5:focus{
-    color: rgb(220, 207, 226);
-  } */
+  
