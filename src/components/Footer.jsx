@@ -75,7 +75,7 @@ const Footer = () => (
             <li>
               <a href="https://twitter.com/">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/128/4401/4401454.png"
+                  src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png"
                   alt="Twitter"
                 />
               </a>
