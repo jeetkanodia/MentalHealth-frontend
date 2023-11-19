@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { categories, API_URL } from "../constants/data";
 import { AuthContext } from "../../context/AuthContext";
+import "../../styles/blogs.css";
 const Image = styled(Box)`
   margin-top: 36px;
   width: 100%;
@@ -73,7 +74,7 @@ const Blog = () => {
   const [Posts, setPosts] = useState([]);
   const { user } = React.useContext(AuthContext);
   const [writtenByMe, setWrittenByMe] = useState(false);
-
+  console.log(user);
   useEffect(() => {
     if (!user) return;
     fetch(`${API_URL}/api/blogs`, {
@@ -163,32 +164,51 @@ const Blog = () => {
         >
           Write a Blog
         </button>
+        <label htmlFor="cbx-3" style={styles.label}>
+          Written by me:
+        </label>
+        <div className="checkbox-wrapper-3">
+          <input
+            checked={writtenByMe}
+            onChange={(e) => setWrittenByMe(e.target.checked)}
+            type="checkbox"
+            id="cbx-3"
+          />
+          <label htmlFor="cbx-3" className="toggle">
+            <span></span>
+          </label>
+        </div>
       </div>
 
       {Posts.filter(
         (post) =>
           selectedCategory === "All" || post.category === selectedCategory
-      ).map((post) => (
-        <CardContainer key={post._id} onClick={() => handleCardClick(post._id)}>
-          <CardContent>
-            <PostTitle>
-              {post.title.length > 20
-                ? post.title.substring(0, 20) + "..."
-                : post.title}
-            </PostTitle>
-            <PostContent>
-              {post.description.length > 50
-                ? post.description.substring(0, 50) + "..."
-                : post.description}
-            </PostContent>
-            <PostMeta>
-              By {post.username} on{" "}
-              {new Date(post.createdAt).toLocaleDateString()}
-            </PostMeta>
-            <PostCategory>Category: {post.category}</PostCategory>
-          </CardContent>
-        </CardContainer>
-      ))}
+      )
+        .filter((post) => !writtenByMe || post.username === user?.name)
+        .map((post) => (
+          <CardContainer
+            key={post._id}
+            onClick={() => handleCardClick(post._id)}
+          >
+            <CardContent>
+              <PostTitle>
+                {post.title.length > 20
+                  ? post.title.substring(0, 20) + "..."
+                  : post.title}
+              </PostTitle>
+              <PostContent>
+                {post.description.length > 50
+                  ? post.description.substring(0, 50) + "..."
+                  : post.description}
+              </PostContent>
+              <PostMeta>
+                By {post.username} on{" "}
+                {new Date(post.createdAt).toLocaleDateString()}
+              </PostMeta>
+              <PostCategory>Category: {post.category}</PostCategory>
+            </CardContent>
+          </CardContainer>
+        ))}
     </div>
   );
 };
