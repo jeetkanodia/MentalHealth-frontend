@@ -9,8 +9,6 @@ import QuizPage from "./components/QuizPage";
 import Results from "./components/Results";
 import Signup from "./components/Signup";
 import Blog from "./components/post/Blog.jsx";
-import Post from "./components/post/post.jsx";
-import Posts from "./components/post/Posts.jsx";
 import DetailedPost from "./components/post/detailedpost.jsx";
 import CreatePost from "./components/post/createpost.jsx";
 
@@ -28,10 +26,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/taketest/:test" element={<QuizPage />} />
           <Route path="/results" element={<Results />} />
-          <Route path="/createpost" element={<CreatePost />} />
+          <Route path="/createpost" element={<CreatePost />} /> {/* done */}
           <Route path="/blog" element={<Blog />} />
-          <Route path="/post" element={<Post />} />
-          <Route path="/Posts" element={<Posts />} />
           <Route path="/details/:postId" element={<DetailedPost />} />
         </Routes>
         <Footer />

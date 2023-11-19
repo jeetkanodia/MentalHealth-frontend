@@ -1,8 +1,8 @@
 import { styled, Box, Typography, Card, CardContent } from "@mui/material";
-import React from "react";
-import { myPosts as Posts } from "./static_blog_data";
-import  { useState } from 'react';
-import { categories } from '../constants/data';
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { categories, API_URL } from "../constants/data";
+import { AuthContext } from "../../context/AuthContext";
 const Image = styled(Box)`
   margin-top: 36px;
   width: 100%;
@@ -17,22 +17,22 @@ const Image = styled(Box)`
 
 const Heading = styled(Typography)`
   font-size: 70px;
-  background: #E5CAA4;
+  background: #e5caa4;
   line-height: 1;
-  border-radius:5px;
+  border-radius: 5px;
   padding: 15px;
-  margin-top:15vh;
+  margin-top: 15vh;
 `;
 
 const SubHeading = styled(Typography)`
   font-size: 20px;
-  background: #E5CAA4;
-  border-radius:5px;
-  margin-top:3vh;
-  padding-left:15px;
+  background: #e5caa4;
+  border-radius: 5px;
+  margin-top: 3vh;
+  padding-left: 15px;
   padding-right: 70px;
   // padding-bottom:3.5vh;
-  color: #
+  color: #;
 `;
 
 const CardContainer = styled(Card)`
@@ -44,6 +44,7 @@ const CardContainer = styled(Card)`
   &:hover {
     background-color: #f0f0f0; // Change as needed
     transform: scale(1.005);
+    cursor: pointer;
 `;
 
 const PostTitle = styled(Typography)`
@@ -68,48 +69,65 @@ const PostCategory = styled(Typography)`
 
 const Blog = () => {
   // State for the selected category
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [Posts, setPosts] = useState([]);
+  const { user } = React.useContext(AuthContext);
+
+  useEffect(() => {
+    if (!user) return;
+    fetch(`${API_URL}/api/blogs`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts(data);
+      });
+  }, [user]);
 
   // Handler for category change
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
+
   const handleCardClick = (postId) => {
     // Example: navigate to a detailed post view
     window.location.href = `/post/${postId}`;
   };
-  
 
   // Inline styles
   const styles = {
     selectorContainer: {
-      margin: '20px 25px',
-      display: 'flex',
-      alignItems: 'center',
+      margin: "20px 25px",
+      display: "flex",
+      alignItems: "center",
     },
     label: {
-      marginRight: '10px',
-      fontWeight: 'bold',
+      marginRight: "10px",
+      fontWeight: "bold",
     },
     select: {
-      padding: '10px',
-      borderRadius: '5px',
-      border: '1px solid #ccc',
-      outline: 'none',
-      cursor: 'pointer',
-      fontSize: '16px',
+      padding: "10px",
+      borderRadius: "5px",
+      border: "1px solid #ccc",
+      outline: "none",
+      cursor: "pointer",
+      fontSize: "16px",
     },
     createPostButton: {
-      margin: '20px 25px',
-      padding: '10px 20px',
-      backgroundColor: '#523330', // Change as needed
-      color: 'white',
-      border: 'none',
-      borderRadius: '5px',
-      cursor: 'pointer',
-      textDecoration: 'none', // For Link component
-      fontWeight:'bold'
-    }
+      margin: "20px 25px",
+      padding: "10px 20px",
+      backgroundColor: "#523330", // Change as needed
+      color: "white",
+      border: "none",
+      borderRadius: "5px",
+      cursor: "pointer",
+      textDecoration: "none", // For Link component
+      fontWeight: "bold",
+    },
   };
 
   return (
@@ -120,17 +138,18 @@ const Blog = () => {
 
         <button
           style={styles.createPostButton}
-          onClick={() => window.location.href = '/createpost'} // Change this as needed
+          onClick={() => (window.location.href = "/createpost")} // Change this as needed
         >
           Make Your Own Blog
         </button>
-  
-        </Image>
+      </Image>
       <br />
 
       {/* Category Selector Container */}
       <div style={styles.selectorContainer}>
-        <label htmlFor="category-selector" style={styles.label}>Choose a category:</label>
+        <label htmlFor="category-selector" style={styles.label}>
+          Choose a category:
+        </label>
         <select
           id="category-selector"
           onChange={handleCategoryChange}
@@ -138,27 +157,37 @@ const Blog = () => {
           style={styles.select}
         >
           <option value="All">All</option>
-          {categories.map(category => (
-            <option key={category.id} value={category.type}>{category.type}</option>
+          {categories.map((category) => (
+            <option key={category.id} value={category.type}>
+              {category.type}
+            </option>
           ))}
         </select>
       </div>
 
-
-
-    
-      {Posts.filter(post => selectedCategory === 'All' || post.category === selectedCategory)
-        .map((post) => (
-          <CardContainer key={post.id} onClick={() => handleCardClick(post.id)}>
-            <CardContent>
-              <PostTitle>{post.title}</PostTitle>
-              <PostContent>{post.content}</PostContent>
-              <PostMeta>
-                By {post.author} on {post.date}
-              </PostMeta>
-              <PostCategory>Category: {post.category}</PostCategory>
-            </CardContent>
-          </CardContainer>
+      {Posts.filter(
+        (post) =>
+          selectedCategory === "All" || post.category === selectedCategory
+      ).map((post) => (
+        <CardContainer key={post._id} onClick={() => handleCardClick(post._id)}>
+          <CardContent>
+            <PostTitle>
+              {post.title.length > 20
+                ? post.title.substring(0, 20) + "..."
+                : post.title}
+            </PostTitle>
+            <PostContent>
+              {post.description.length > 50
+                ? post.description.substring(0, 50) + "..."
+                : post.description}
+            </PostContent>
+            <PostMeta>
+              By {post.username} on{" "}
+              {new Date(post.createdAt).toLocaleDateString()}
+            </PostMeta>
+            <PostCategory>Category: {post.category}</PostCategory>
+          </CardContent>
+        </CardContainer>
       ))}
     </div>
   );
