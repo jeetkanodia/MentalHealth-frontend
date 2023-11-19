@@ -13,6 +13,7 @@ import DetailedPost from "./components/post/detailedpost.jsx";
 import CreatePost from "./components/post/createpost.jsx";
 
 import { Toaster } from "react-hot-toast";
+import NotFoundPage from "./components/404page";
 function App() {
   return (
     <>
@@ -29,6 +30,7 @@ function App() {
           <Route path="/createpost" element={<CreatePost />} /> {/* done */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/details/:postId" element={<DetailedPost />} />
+          <Route component={NotFoundPage} />
         </Routes>
         <Footer />
         <Toaster />
