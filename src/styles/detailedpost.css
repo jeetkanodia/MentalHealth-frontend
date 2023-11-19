@@ -1,0 +1,28 @@
+/* DetailedPost.css */
+.detailed-post-container {
+    margin: 20px;
+    margin-top: 10%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.detailed-post-title {
+    margin-bottom: 20px;
+    color: #333;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.detailed-post-description {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.detailed-post-meta {
+    margin-bottom: 10px;
+    color: #777;
+    font-style: italic;
+}
