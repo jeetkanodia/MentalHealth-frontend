@@ -11,6 +11,7 @@ const Results = () => {
         <h1 className="result-title">
           You scored <span className="score">{score}</span>
         </h1>
+        
         <h3>Interpretation of the score</h3>
       </div>
 

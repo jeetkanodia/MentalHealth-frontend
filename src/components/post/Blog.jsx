@@ -6,7 +6,7 @@ import { categories } from '../constants/data';
 const Image = styled(Box)`
   margin-top: 36px;
   width: 100%;
-  background: url(https://images.pexels.com/photos/5993624/pexels-photo-5993624.jpeg)
+  background: url(https://cdn.pixabay.com/photo/2017/05/30/03/58/blog-2355684_640.jpg)
     center/55% repeat-x #000;
   height: 50vh;
   display: flex;
@@ -17,19 +17,22 @@ const Image = styled(Box)`
 
 const Heading = styled(Typography)`
   font-size: 70px;
-  background: rgb(214, 210, 218);
+  background: #E5CAA4;
   line-height: 1;
   border-radius:5px;
   padding: 15px;
+  margin-top:15vh;
 `;
 
 const SubHeading = styled(Typography)`
   font-size: 20px;
-  background: rgb(214, 210, 218);
+  background: #E5CAA4;
   border-radius:5px;
+  margin-top:3vh;
   padding-left:15px;
   padding-right: 70px;
-  padding-bottom:3.5vh;
+  // padding-bottom:3.5vh;
+  color: #
 `;
 
 const CardContainer = styled(Card)`
@@ -99,12 +102,13 @@ const Blog = () => {
     createPostButton: {
       margin: '20px 25px',
       padding: '10px 20px',
-      backgroundColor: '#4CAF50', // Change as needed
+      backgroundColor: '#523330', // Change as needed
       color: 'white',
       border: 'none',
       borderRadius: '5px',
       cursor: 'pointer',
       textDecoration: 'none', // For Link component
+      fontWeight:'bold'
     }
   };
 

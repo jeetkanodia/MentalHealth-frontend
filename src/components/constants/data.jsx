@@ -70,7 +70,7 @@ export const resultCardData = [
   {
     heading: "Score of 0-6",
     description:
-      "Your level of depression and sadness is low. However, everyone feels sad or blue at times. You can take action to protect your mental health for up-to 7 days on your own.",
+      "Your level of depression and sadness is low. You can take action to protect your mental health for up-to 7 days on your own.",
   },
   {
     heading: "Score of 7-12",

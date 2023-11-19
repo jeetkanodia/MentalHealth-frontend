@@ -1,8 +1,9 @@
 .quiz-page-container {
     padding-top: 15vh;
-    height: 85vh;
+    height: 70vh;
     width: 100%;
-    background-color: #F8F6F4;
+    /* background-color: #F8F6F4; */
+    background-image: linear-gradient(rgb(228, 244, 177) 18%,rgb(183, 207, 228), rgb(199, 228, 231),rgb(238, 249, 201));
 }
 
 .quiz-page-title {
@@ -32,7 +33,7 @@
 }
 
 .quiz-answer {
-    background-color: #B7C4CF;
+    background-color: #1298d1;
     width: 20%;
     text-align: center;
     margin: 1rem;
@@ -41,8 +42,10 @@
     border: 1px solid #ccc;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    color: white;
+    font-weight: bold;
 }
 
 .quiz-answer:hover {
-    background-color: #A3B1BD;
+    background-color: rgb(38, 104, 152);
 }

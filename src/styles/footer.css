@@ -35,7 +35,8 @@
   
   h2 {
     margin-top: 10px;
-    font-size: 39px;
+    font-family: bernard;
+    font-weight: bold;
   }
   
   ul.list-unstyled {
@@ -52,7 +53,7 @@
   
   .border-top {
     margin-top: 1rem;
-    border-top: 1px solid #777;
+    border-top: 1px solid #777 !important;
     padding-top: 1rem;
     text-align: center;
     font-size: 14px;
