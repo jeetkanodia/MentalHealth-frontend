@@ -77,7 +77,9 @@ const Blog = () => {
   const [writtenByMe, setWrittenByMe] = useState(false);
   console.log(user);
   useEffect(() => {
-    if (!user) return;
+    if (!user) {
+      window.location.href = "/login";
+    }
     fetch(`${API_URL}/api/blogs`, {
       method: "GET",
       headers: {

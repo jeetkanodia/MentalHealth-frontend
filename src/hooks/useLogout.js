@@ -4,10 +4,10 @@ export const useLogout = () => {
   const logout = () => {
     // remove token from local storage
     localStorage.removeItem("user");
+    localStorage.removeItem("score");
 
     // dispatch logout action
     dispatch({ type: "LOGOUT" });
-
     // reload the page
     window.location.reload();
   };
