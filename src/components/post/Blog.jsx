@@ -131,20 +131,19 @@ const Blog = () => {
 
 
 
+    
       {Posts.filter(post => selectedCategory === 'All' || post.category === selectedCategory)
         .map((post) => (
-          <Link to={`/post/${post.id}`} key={post.id} style={{ textDecoration: 'none' }}>
-            <CardContainer>
-              <CardContent>
-                <PostTitle>{post.title}</PostTitle>
-                <PostContent>{post.content}</PostContent>
-                <PostMeta>
-                  By {post.author} on {post.date}
-                </PostMeta>
-                <PostCategory>Category: {post.category}</PostCategory>
-              </CardContent>
-            </CardContainer>
-          </Link>
+          <CardContainer key={post.id}>
+            <CardContent>
+              <PostTitle>{post.title}</PostTitle>
+              <PostContent>{post.content}</PostContent>
+              <PostMeta>
+                By {post.author} on {post.date}
+              </PostMeta>
+              <PostCategory>Category: {post.category}</PostCategory>
+            </CardContent>
+          </CardContainer>
       ))}
     </div>
   );
