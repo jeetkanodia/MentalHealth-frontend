@@ -1,21 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useSignup } from "../hooks/useSignup";
 import user_icon from "../assets/person.png";
 import email_icon from "../assets/email.png";
 import password_icon from "../assets/password.png";
+import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 
 const Signup = () => {
+  const { user } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const { signup, error, isLoading } = useSignup();
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     if (isLoading) return;
     e.preventDefault();
     await signup(name, email, password);
   };
+
+  useEffect(() => {
+    // reroute to home page after login
+    if (localStorage.getItem("user")) {
+      navigate("/");
+    }
+  }, [user]);
 
   return (
     <div className="container">
@@ -58,7 +70,7 @@ const Signup = () => {
               <svg
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 1024 1024"
                 height="2em"
                 width="2em"
@@ -70,7 +82,7 @@ const Signup = () => {
               <svg
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 1024 1024"
                 height="2em"
                 width="2em"
