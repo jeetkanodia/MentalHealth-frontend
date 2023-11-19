@@ -5,56 +5,56 @@ const Footer = () => (
   <div className="container-fluid">
     <footer>
       <div className="row">
-        <div className="col-6 col-md-2 mb-3 ms-5">
+        <div className="col-6 col-md-2 mb-1" style={{ margin: "0.5rem" }}>
           <h2 className="text-uppercase">Contact Us</h2>
           <ul className="nav flex-column">
             <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                <h6>sukoon123@gmail.com</h6>
-              </a>
+              <h6 className="p-0 text-body-secondary">
+                sukoon123@gmail.com
+              </h6>
             </li>
             <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                <h6>9584XXXXXX</h6>
-              </a>
+              <h6 className="p-0 text-body-secondary">
+                9584XXXXXX
+              </h6>
             </li>
           </ul>
         </div>
 
-        <div className="col-6 col-md-2 mb-3 ms-4">
-          <h2 className="text-uppercase">Section</h2>
+        <div className="col-6 col-md-2 mb-1" style={{ margin: "0.5rem" }}>
+          <h2 className="text-uppercase">get started</h2>
           <ul className="nav flex-column">
             <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
+              <a href="/signup" className="nav-link p-0 text-body-secondary">
+              <h6>Sign Up</h6>
               </a>
             </li>
             <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
+              <a href="/login" className="nav-link p-0 text-body-secondary">
+              <h6>Login</h6>
               </a>
             </li>
           </ul>
         </div>
 
-        <div className="col-6 col-md-2 mb-3">
-          <h2 className="text-uppercase">Section</h2>
+        <div className="col-6 col-md-2 mb-1" style={{ margin: "0.5rem" }}>
+          <h2 className="text-uppercase">Support Hub</h2>
           <ul className="nav flex-column">
             <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
+              <a href="/gethelp" className="nav-link p-0 text-body-secondary">
+              <h6>Get Help</h6>
               </a>
             </li>
             <li className="nav-item mb-2">
-              <a href="#" className="nav-link p-0 text-body-secondary">
-                Home
+              <a href="/test" className="nav-link p-0 text-body-secondary">
+              <h6>Take a Quiz</h6>
               </a>
             </li>
           </ul>
         </div>
 
-        <div className="offset-md-1 col-md-5 mb-3 ms-4">
-          <h2>Sukoon</h2>
+        <div className="offset-md-1 col-md-2 mb-1" style={{ margin: "0.5rem" }}>
+          <h2 className="ms-1">Sukoon</h2>
           <ul className="list-unstyled d-flex">
             <li>
               <a href="https://www.instagram.com/">

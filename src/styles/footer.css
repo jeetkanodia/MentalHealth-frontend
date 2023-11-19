@@ -1,31 +1,26 @@
 .container-fluid {
     background-color: #b2e3d5;
-    padding: 1rem;
   }
   
   .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .col-6 {
-    margin-bottom: 1rem;
-  }
-  
-  h5 {
-    font-size: 18px;
-    margin-bottom: 1rem;
+    padding: 1vh;
   }
   
   .nav {
     list-style: none;
   }
+
+  h6 {
+    color: #7f7a7a;
+    display: block;
+  }
   
   .nav-link {
     text-decoration: none;
-    color: #b0b0b0;
+    color: #7f7a7a;
     padding: 0.25rem 0;
     display: block;
   }
@@ -48,10 +43,8 @@
   }
   
   .border-top {
-    margin-top: 1rem;
     border-top: 1px solid #777;
     padding-top: 1rem;
     text-align: center;
     font-size: 14px;
   }
-  
