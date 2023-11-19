@@ -45,7 +45,7 @@ const CardContainer = styled(Card)`
   &:hover {
     background-color: #f0f0f0; // Change as needed
     transform: scale(1.005);
-    cursor: pointer;
+
 `;
 
 const PostTitle = styled(Typography)`
@@ -100,6 +100,25 @@ const Blog = () => {
     window.location.href = `/post/${postId}`;
   };
 
+  const handleDelete = (postId) => {
+    return () => {
+      fetch(`${API_URL}/api/blogs/${postId}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user.token}`,
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          window.location.reload();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+  };
+
   // Inline styles
   const styles = {
     selectorContainer: {
@@ -120,7 +139,7 @@ const Blog = () => {
       fontSize: "16px",
     },
     createPostButton: {
-      margin: "20px 25px",
+      margin: "10px 25px",
       padding: "10px 20px",
       backgroundColor: "#523330", // Change as needed
       color: "white",
@@ -186,10 +205,7 @@ const Blog = () => {
       )
         .filter((post) => !writtenByMe || post.username === user?.name)
         .map((post) => (
-          <CardContainer
-            key={post._id}
-            onClick={() => handleCardClick(post._id)}
-          >
+          <CardContainer key={post._id}>
             <CardContent>
               <PostTitle>
                 {post.title.length > 20
@@ -206,7 +222,26 @@ const Blog = () => {
                 {new Date(post.createdAt).toLocaleDateString()}
               </PostMeta>
               <PostCategory>Category: {post.category}</PostCategory>
+              <div
+                onClick={() => handleCardClick(post._id)}
+                style={{
+                  color: "#523330",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                  textDecoration: "none",
+                }}
+              >
+                Read more...
+              </div>
             </CardContent>
+            {post.username === user?.name ? (
+              <button
+                style={styles.createPostButton}
+                onClick={handleDelete(post._id)}
+              >
+                Delete Blog
+              </button>
+            ) : null}
           </CardContainer>
         ))}
     </div>
