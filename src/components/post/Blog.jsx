@@ -72,6 +72,7 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [Posts, setPosts] = useState([]);
   const { user } = React.useContext(AuthContext);
+  const [writtenByMe, setWrittenByMe] = useState(false);
 
   useEffect(() => {
     if (!user) return;
@@ -158,7 +159,7 @@ const Blog = () => {
         </select>
         <button
           style={styles.createPostButton}
-          onClick={() => (window.location.href = "/createpost")} // Change this as needed
+          onClick={() => (window.location.href = "/createpost")}
         >
           Write a Blog
         </button>
