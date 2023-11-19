@@ -4,6 +4,7 @@ import { useState } from "react";
 import { categories, API_URL } from "../constants/data";
 import { AuthContext } from "../../context/AuthContext";
 import "../../styles/blogs.css";
+import toast from "react-hot-toast";
 const Image = styled(Box)`
   margin-top: 36px;
   width: 100%;
@@ -111,9 +112,13 @@ const Blog = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          window.location.reload();
+          toast.success("Blog Deleted Successfully");
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000);
         })
         .catch((err) => {
+          toast.error("Something went wrong");
           console.log(err);
         });
     };
