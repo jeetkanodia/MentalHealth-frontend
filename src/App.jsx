@@ -28,7 +28,7 @@ function App() {
           <Route path="/results" element={<Results />} />
           <Route path="/createpost" element={<CreatePost />} /> {/* done */}
           <Route path="/blog" element={<Blog />} />
-          <Route path="/details/:postId" element={<DetailedPost />} />
+          <Route path="/post/:postId" element={<DetailedPost />} />
         </Routes>
         <Footer />
         <Toaster />
