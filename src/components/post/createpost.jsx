@@ -14,7 +14,7 @@ import { AddCircle as Add } from "@mui/icons-material";
 import { categories, API_URL } from "../constants/data"; // Import categories
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useLocation } from "react-router-dom";
-
+import toast from "react-hot-toast";
 const Container = styled(Box)(({ theme }) => ({
   height: "100vh",
   margin: "50px 100px",
@@ -72,6 +72,9 @@ const CreatePost = () => {
   }, []);
 
   const setPost = async () => {
+    if (!user) return toast.error("Please login to post");
+    if (!title || !description || !category)
+      return toast.error("Please fill all the fields");
     const data = {
       username: user.name,
       title,
@@ -87,7 +90,13 @@ const CreatePost = () => {
       body: JSON.stringify(data),
     });
     if (response.ok) {
-      window.location.href = "/blog";
+      toast.success("Post created successfully");
+      setTimeout(() => {
+        window.location.href = "/blog";
+      }, 2000);
+    }
+    if (!response.ok) {
+      toast.error("Something went wrong");
     }
   };
 

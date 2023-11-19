@@ -13,6 +13,8 @@ import Post from "./components/post/post.jsx";
 import Posts from "./components/post/Posts.jsx";
 import DetailedPost from "./components/post/detailedpost.jsx";
 import CreatePost from "./components/post/createpost.jsx";
+
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
@@ -33,6 +35,7 @@ function App() {
           <Route path="/details/:postId" element={<DetailedPost />} />
         </Routes>
         <Footer />
+        <Toaster />
       </Router>
     </>
   );
