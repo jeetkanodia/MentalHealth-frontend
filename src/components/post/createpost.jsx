@@ -10,10 +10,8 @@ import {
   InputLabel,
   TextareaAutosize,
 } from "@mui/material";
-import { AddCircle as Add } from "@mui/icons-material";
 import { categories, API_URL } from "../constants/data"; // Import categories
 import { useAuthContext } from "../../hooks/useAuthContext";
-import { useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 const Container = styled(Box)(({ theme }) => ({
   height: "100vh",
